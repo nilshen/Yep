@@ -1,4 +1,6 @@
 import React from 'react';
+import * as Demo from './demo_user_login'
+
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -9,6 +11,7 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemoUser = this.handleDemoUser.bind(this)
   }
 
   update(field) {
@@ -23,6 +26,13 @@ class SessionForm extends React.Component {
     this.props.processForm(user);
   }
 
+  handleDemoUser(e) {
+    e.preventDefault();
+    const user = Demo.setDemoUser()
+    this.props.processForm(user)
+  }
+
+
   renderErrors() {
     return(
       <ul>
@@ -36,6 +46,13 @@ class SessionForm extends React.Component {
   }
 
   render() {
+
+    const demoLogin = (
+      <button className="session-submit" onClick={this.handleDemoUser}>
+        Demo User Login
+      </button>
+    )
+
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -63,6 +80,7 @@ class SessionForm extends React.Component {
             <br/>
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
+          { demoLogin }
         </form>
       </div>
     );
