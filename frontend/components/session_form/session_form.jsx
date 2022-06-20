@@ -28,12 +28,16 @@ class SessionForm extends React.Component {
 
   handleDemoUser(e) {
     e.preventDefault();
+    debugger
     const user = Demo.setDemoUser()
+    debugger
     this.props.processForm(user)
+    debugger
   }
 
 
   renderErrors() {
+    // debugger
     return(
       <ul>
         {this.props.errors.map((error, i) => (
@@ -43,6 +47,7 @@ class SessionForm extends React.Component {
         ))}
       </ul>
     );
+    // debugger
   }
 
   render() {
