@@ -12,3 +12,17 @@ demo = User.create({
     username: "whatsforsupper",
     password: "123456"
 })
+
+Restaurant.destroy_all
+
+r1 = Restaurant.create({
+    name: "popeyes"
+})
+
+r2 = Restaurant.create({
+    name: "KFC"
+})
+
+r3 = Restaurant.create({
+    name: "Chef's table"
+})

@@ -4021,3 +4021,992 @@ Completed 200 OK in 281ms (Views: 5.2ms | ActiveRecord: 5.9ms)
 
 
   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for ::1 at 2022-06-21 09:15:20 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/linshen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "SPN74_Wj0ryfjcjWX4WmCg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 892ms (Views: 879.4ms | ActiveRecord: 11.1ms)
+
+
+Started DELETE "/api/session" for ::1 at 2022-06-21 09:15:24 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "SPN74_Wj0ryfjcjWX4WmCg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:30
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "whatsforsupper"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "o5Q9cfb2lhCWHpUvecS3Eg"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[36mUser Update (1.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "o5Q9cfb2lhCWHpUvecS3Eg"], ["updated_at", "2022-06-21 13:15:24.984439"], ["id", 4]]
+  ↳ app/models/user.rb:30
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:30
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.0ms)
+Completed 200 OK in 17ms (Views: 5.1ms | ActiveRecord: 7.2ms)
+
+
+Started POST "/api/session" for ::1 at 2022-06-21 10:33:59 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"whatsforsupper", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "whatsforsupper"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:30
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "whatsforsupper"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "lNQjB1834VqLcf3he54W3Q"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "lNQjB1834VqLcf3he54W3Q"], ["updated_at", "2022-06-21 14:34:00.203320"], ["id", 4]]
+  ↳ app/models/user.rb:30
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:30
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.7ms)
+Completed 200 OK in 300ms (Views: 6.3ms | ActiveRecord: 5.6ms)
+
+
+Started DELETE "/api/session" for ::1 at 2022-06-21 10:34:02 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lNQjB1834VqLcf3he54W3Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:30
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "whatsforsupper"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "K4v_u0FfOB3Z7h6UQdhIzA"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "K4v_u0FfOB3Z7h6UQdhIzA"], ["updated_at", "2022-06-21 14:34:02.338044"], ["id", 4]]
+  ↳ app/models/user.rb:30
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:30
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.0ms)
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/api/session" for ::1 at 2022-06-21 10:53:59 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+Completed 401 Unauthorized in 5ms (Views: 0.2ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/api/session" for ::1 at 2022-06-21 10:54:02 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"whatsforsupper", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "whatsforsupper"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:30
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "whatsforsupper"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "Ik2bQOU0Hd_-R4kzknls8w"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Ik2bQOU0Hd_-R4kzknls8w"], ["updated_at", "2022-06-21 14:54:02.999519"], ["id", 4]]
+  ↳ app/models/user.rb:30
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:30
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 281ms (Views: 5.8ms | ActiveRecord: 5.7ms)
+
+
+Started DELETE "/api/session" for ::1 at 2022-06-21 10:54:05 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Ik2bQOU0Hd_-R4kzknls8w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:30
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "whatsforsupper"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "qwaEsOAc222rC36LjQYRmA"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "qwaEsOAc222rC36LjQYRmA"], ["updated_at", "2022-06-21 14:54:05.014479"], ["id", 4]]
+  ↳ app/models/user.rb:30
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:30
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.1ms)
+Completed 200 OK in 10ms (Views: 4.8ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/api/user" for ::1 at 2022-06-21 11:00:11 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZQphLQ9aP4VrsQd4t4NiMg"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 422 Unprocessable Entity in 291ms (Views: 0.2ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/api/user" for ::1 at 2022-06-21 11:04:10 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "_a8L6mTUyDGVMjG7MkeXcw"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 422 Unprocessable Entity in 266ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2022-06-21 14:40:47 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-21 14:40:48 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-21 14:40:48 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-21 14:40:48 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-21 14:40:49 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-21 14:46:08 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-21 14:46:09 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-21 14:46:09 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-21 14:46:09 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-21 14:46:09 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-21 14:46:09 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-21 14:46:10 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-21 14:46:10 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-21 14:51:27 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...'../assets/images/favicon.ico'('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...ages/favicon.ico'('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/a875461844d86491/variables" for ::1 at 2022-06-21 14:51:27 -0400
+Started GET "/" for ::1 at 2022-06-21 14:51:46 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+....../assets/images/favicon.ico'('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...ages/favicon.ico'('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/b2252d08b3cfbd11/variables" for ::1 at 2022-06-21 14:51:46 -0400
+Started GET "/" for ::1 at 2022-06-21 14:51:46 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+....../assets/images/favicon.ico'('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...ages/favicon.ico'('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/d6eefb5f59acf7a3/variables" for ::1 at 2022-06-21 14:51:46 -0400
+Started GET "/" for ::1 at 2022-06-21 14:51:47 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+....../assets/images/favicon.ico'('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...ages/favicon.ico'('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/974b8bbf5008cd39/variables" for ::1 at 2022-06-21 14:51:47 -0400
+Started GET "/" for ::1 at 2022-06-21 14:52:15 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...link_tag "/app/assets/images/"('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...p/assets/images/"('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/dd9f63a18c437297/variables" for ::1 at 2022-06-21 14:52:15 -0400
+Started GET "/" for ::1 at 2022-06-21 14:52:16 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...link_tag "/app/assets/images/"('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...p/assets/images/"('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/7a1b12926dda3bcc/variables" for ::1 at 2022-06-21 14:52:16 -0400
+Started GET "/" for ::1 at 2022-06-21 14:52:16 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...link_tag "/app/assets/images/"('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...p/assets/images/"('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/d2343ff14451d335/variables" for ::1 at 2022-06-21 14:52:16 -0400
+Started GET "/" for ::1 at 2022-06-21 14:52:16 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...link_tag "/app/assets/images/"('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...p/assets/images/"('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/33e0af813e9e6397/variables" for ::1 at 2022-06-21 14:52:16 -0400
+Started GET "/" for ::1 at 2022-06-21 14:52:17 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...link_tag "/app/assets/images/"('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...p/assets/images/"('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/9782460b723880ce/variables" for ::1 at 2022-06-21 14:52:17 -0400
+Started GET "/" for ::1 at 2022-06-21 14:52:17 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...link_tag "/app/assets/images/"('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...p/assets/images/"('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/b9ba66494b2d77ac/variables" for ::1 at 2022-06-21 14:52:17 -0400
+Started GET "/" for ::1 at 2022-06-21 14:52:17 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...link_tag "/app/assets/images/"('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...p/assets/images/"('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/38b5cee9746ca45a/variables" for ::1 at 2022-06-21 14:52:17 -0400
+Started GET "/" for ::1 at 2022-06-21 14:52:17 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...link_tag "/app/assets/images/"('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...p/assets/images/"('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/1ce6b822d1afd8cb/variables" for ::1 at 2022-06-21 14:52:17 -0400
+Started GET "/" for ::1 at 2022-06-21 14:53:04 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...link_tag "/app/assets/images/"('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...p/assets/images/"('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/dff4f103e8d1be67/variables" for ::1 at 2022-06-21 14:53:04 -0400
+Started GET "/" for ::1 at 2022-06-21 14:53:05 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...link_tag "/app/assets/images/"('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...p/assets/images/"('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/b6106d21fae8017d/variables" for ::1 at 2022-06-21 14:53:05 -0400
+Started GET "/" for ::1 at 2022-06-21 14:53:05 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...link_tag "/app/assets/images/"('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...p/assets/images/"('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/b7bd565f5e70462f/variables" for ::1 at 2022-06-21 14:53:05 -0400
+Started GET "/" for ::1 at 2022-06-21 14:53:06 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...link_tag "/app/assets/images/"('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...p/assets/images/"('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/cf9836eb7c8475f3/variables" for ::1 at 2022-06-21 14:53:06 -0400
+Started GET "/" for ::1 at 2022-06-21 14:53:06 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...link_tag "/app/assets/images/"('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...p/assets/images/"('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/7f5d6aa4942f0143/variables" for ::1 at 2022-06-21 14:53:06 -0400
+Started GET "/" for ::1 at 2022-06-21 14:53:07 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...link_tag "/app/assets/images/"('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...p/assets/images/"('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/2cbb7b41584188c7/variables" for ::1 at 2022-06-21 14:53:07 -0400
+Started GET "/" for ::1 at 2022-06-21 14:53:08 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...link_tag "/app/assets/images/"('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...p/assets/images/"('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/b354459a2da933a4/variables" for ::1 at 2022-06-21 14:53:08 -0400
+Started GET "/" for ::1 at 2022-06-21 14:53:08 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...link_tag "/app/assets/images/"('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...p/assets/images/"('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/fe7ae451b120e0c8/variables" for ::1 at 2022-06-21 14:53:08 -0400
+Started GET "/" for ::1 at 2022-06-21 14:53:35 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...link_tag "/app/assets/images/"('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...p/assets/images/"('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/ec7e7800e3c59a0d/variables" for ::1 at 2022-06-21 14:53:35 -0400
+Started GET "/" for ::1 at 2022-06-21 14:53:35 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...link_tag "/app/assets/images/"('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...p/assets/images/"('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/c44fcd10089d1a76/variables" for ::1 at 2022-06-21 14:53:35 -0400
+Started GET "/" for ::1 at 2022-06-21 14:53:36 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...link_tag "/app/assets/images/"('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...p/assets/images/"('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/5bf41262a94f7143/variables" for ::1 at 2022-06-21 14:53:36 -0400
+Started GET "/" for ::1 at 2022-06-21 14:53:36 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...link_tag "/app/assets/images/"('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...p/assets/images/"('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/f450a9f2bd46581a/variables" for ::1 at 2022-06-21 14:53:36 -0400
+Started GET "/" for ::1 at 2022-06-21 14:53:36 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...link_tag "/app/assets/images/"('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...p/assets/images/"('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/802a4308b585620e/variables" for ::1 at 2022-06-21 14:53:36 -0400
+Started GET "/" for ::1 at 2022-06-21 14:53:37 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...link_tag "/app/assets/images/"('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...p/assets/images/"('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/3c14169cc841e39f/variables" for ::1 at 2022-06-21 14:53:37 -0400
+Started GET "/" for ::1 at 2022-06-21 14:53:45 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...link_tag "/app/assets/images/"('logo.svg') );@output_buffer....
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...p/assets/images/"('logo.svg') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/f74c08815b900862/variables" for ::1 at 2022-06-21 14:53:45 -0400
+Started GET "/" for ::1 at 2022-06-21 14:53:51 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 192ms (Views: 190.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-21 14:58:01 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '(', expecting ')'
+...link_tag "/app/assets/images/"('favicon.png') );@output_buff...
+...                              ^
+/Users/linshen/Desktop/Yep/app/views/layouts/application.html.erb:10: syntax error, unexpected ')', expecting keyword_end
+...ssets/images/"('favicon.png') );@output_buffer.safe_append='
+...                              ^:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/99390a9b28ce65c0/variables" for ::1 at 2022-06-21 14:58:01 -0400
+Started GET "/" for ::1 at 2022-06-21 14:58:10 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - unknown regexp options - at:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/924383b436e369e4/variables" for ::1 at 2022-06-21 14:58:10 -0400
+Started GET "/" for ::1 at 2022-06-21 14:58:10 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - unknown regexp options - at:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/93706910ef21ec8c/variables" for ::1 at 2022-06-21 14:58:10 -0400
+Started GET "/" for ::1 at 2022-06-21 14:58:11 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - unknown regexp options - at:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/a8ed21fccff098fc/variables" for ::1 at 2022-06-21 14:58:11 -0400
+Started GET "/" for ::1 at 2022-06-21 14:58:11 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - unknown regexp options - at:
+  app/views/layouts/application.html.erb:10:in `'
+
+Started POST "/__better_errors/8b6feb2589b11b35/variables" for ::1 at 2022-06-21 14:58:11 -0400
+Started GET "/" for ::1 at 2022-06-21 14:58:31 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 488ms (Views: 487.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-21 14:58:33 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-21 14:59:15 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-21 14:59:16 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-21 14:59:17 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-21 14:59:45 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-21 14:59:46 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-21 15:00:06 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 148ms (Views: 146.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-21 15:17:16 -0400
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/linshen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+        bin/rails db:migrate RAILS_ENV=development:
+
+Started POST "/__better_errors/5f18921bdc8727c9/variables" for ::1 at 2022-06-21 15:17:16 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4135811507478536445)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateRestaurants (20220621191223)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (13.9ms)[0m  [1m[35mCREATE TABLE "restaurants" ("id" bigserial primary key, "name" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20220621191223_create_restaurants.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_restaurants_on_name" ON "restaurants"  ("name")[0m
+  ↳ db/migrate/20220621191223_create_restaurants.rb:8
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220621191223"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(4135811507478536445)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2022-06-21 15:25:32 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/linshen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:9
+  [1m[35m (4.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "whatsforsupper"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "g6WKwyYwJymgybusRyraPA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "whatsforsupper"], ["password_digest", "$2a$12$n0wXbkc8NW7yTo9hVgDq.OKibdJryMFiiglSw6S6B3M2zuYa8PAYu"], ["session_token", "g6WKwyYwJymgybusRyraPA"], ["created_at", "2022-06-21 19:25:45.034949"], ["updated_at", "2022-06-21 19:25:45.034949"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[36mRestaurant Load (5.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mRestaurant Create (0.8ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "popeyes"], ["created_at", "2022-06-21 19:25:45.052563"], ["updated_at", "2022-06-21 19:25:45.052563"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "bonchon"], ["created_at", "2022-06-21 19:25:45.054635"], ["updated_at", "2022-06-21 19:25:45.054635"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mRestaurant Create (0.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "mad for chicken"], ["created_at", "2022-06-21 19:25:45.056135"], ["updated_at", "2022-06-21 19:25:45.056135"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Exists (3.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "whatsforsupper"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "8n7nZ5eGArx4Ds5sG1fdNA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "whatsforsupper"], ["password_digest", "$2a$12$TTUdHegLVMwgTTAirkqRyOBztz9cAnhzse/DBMOveyuK3kfsrKPlq"], ["session_token", "8n7nZ5eGArx4Ds5sG1fdNA"], ["created_at", "2022-06-21 19:29:47.625370"], ["updated_at", "2022-06-21 19:29:47.625370"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mRestaurant Destroy (0.9ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mRestaurant Destroy (0.2ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mRestaurant Destroy (0.2ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mRestaurant Create (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "popeyes"], ["created_at", "2022-06-21 19:29:47.649640"], ["updated_at", "2022-06-21 19:29:47.649640"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mRestaurant Create (0.7ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "KFC"], ["created_at", "2022-06-21 19:29:47.652362"], ["updated_at", "2022-06-21 19:29:47.652362"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Chef's table"], ["created_at", "2022-06-21 19:29:47.654643"], ["updated_at", "2022-06-21 19:29:47.654643"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+Started POST "/api/session" for ::1 at 2022-06-21 15:29:50 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"whatsforsupper", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "whatsforsupper"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:30
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "whatsforsupper"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "NVvpYUYfWiJdAgbW4IL0cA"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "NVvpYUYfWiJdAgbW4IL0cA"], ["updated_at", "2022-06-21 19:29:51.141492"], ["id", 6]]
+  ↳ app/models/user.rb:30
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:30
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 304ms (Views: 6.4ms | ActiveRecord: 16.7ms)
+
+
