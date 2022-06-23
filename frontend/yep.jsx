@@ -2,6 +2,9 @@ import React from "react";
 import ReactDOM from 'react-dom'
 import configureStore from './store/store'
 import Root from "./components/root"
+import { fetchRestaurants, fetchRestaurant } from "./util/restaurant_api_util";
+import {requestRestaurants, requestRestaurant } from './actions/restaurant_actions'
+
 
 document.addEventListener("DOMContentLoaded", ()=> {
     // debugger
@@ -26,6 +29,10 @@ document.addEventListener("DOMContentLoaded", ()=> {
     window.store = store;
     window.getState = store.getState;
     window.dispatch = store.dispatch;
+    window.fetchRestaurants = fetchRestaurants;
+    window.fetchRestaurant = fetchRestaurant;
+    window.requestRestaurants = requestRestaurants
+    window.requestRestaurant = requestRestaurant
   // TESTING END
     // debugger
 })

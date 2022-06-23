@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
+User.reset_pk_sequence
 
 demo = User.create({
     username: "whatsforsupper",
@@ -14,6 +15,8 @@ demo = User.create({
 })
 
 Restaurant.destroy_all
+Restaurant.reset_pk_sequence
+
 
 r1 = Restaurant.create({
     name: "popeyes"
