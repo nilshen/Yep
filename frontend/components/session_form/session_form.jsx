@@ -28,11 +28,11 @@ class SessionForm extends React.Component {
 
   handleDemoUser(e) {
     e.preventDefault();
-    debugger
+    // debugger
     const user = Demo.setDemoUser()
-    debugger
+    // debugger
     this.props.processForm(user)
-    debugger
+    // debugger
   }
 
 
