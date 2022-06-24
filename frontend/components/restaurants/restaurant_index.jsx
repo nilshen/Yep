@@ -25,14 +25,20 @@ class RestaurantIndex extends React.Component {
                 <Link to="/" style={{ textDecoration: 'none' }}>Home Page</Link>   
                 <Link to="/restaurants" style={{ textDecoration: 'none' }}>Restaurants</Link> 
                 <Search_bar_container/>
-                <ul>
-                {restaurants.map((restaurant)=>(
-                    <RestaurantIndexItem 
-                        restaurant = { restaurant }
-                        key = { restaurant.id }
-                    />
-                    ))}
-                </ul>
+                    <div className="indexlayout-container">
+                        <div>filter placeholder</div>
+                    
+                        <ul className="indexlayout-item">
+                        {restaurants.map((restaurant)=>(
+                            <RestaurantIndexItem 
+                                restaurant = { restaurant }
+                                key = { restaurant.id }
+                            />
+                            ))}
+                        </ul>
+                        <div>Google Map placeholder</div>
+                    
+                    </div>
             </div>
         );
     }

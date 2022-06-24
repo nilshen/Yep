@@ -1,9 +1,6 @@
-div:link {
-    text-decoration: none
-}
-
 .index-item-container {
     display: flex;
+    
     
 }
 
@@ -18,15 +15,23 @@ div:link {
     width: 220px;
     height: 220px;
     margin-top: 3px;
-    border-radius: 5px;
+    margin-right: 5px;
+    border-radius: 8px;
 }
 
 .index-item-individual-details {
     display: flex;
+    font-size: small;
+    // flex-direction: column;
+    // justify-content: space-between;
 
 }
 
 .index-item-individual-details-cat {
 
+    margin-right: 10px;
 }
 
+.index-item-individual-hour {
+    font-size: small;
+}

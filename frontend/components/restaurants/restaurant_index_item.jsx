@@ -15,13 +15,15 @@ const RestaurantIndexItem = (props) => {
 
             <div className='index-item-individual'>
                 <h3>{restaurant.name}</h3>
-                
+            
+   
                 <div className='index-item-individual-details'>
                     <div className='index-item-individual-details-cat'>{restaurant.category}</div>
                     <div>{restaurant.price}</div>
                 </div>
                 
-                <div>{restaurant.hours}</div>
+                <div className="index-item-individual-hour">Hours: {restaurant.hours}</div>
+            
             </div>
         </div>
         </Link>
