@@ -12,6 +12,7 @@ class RestaurantIndex extends React.Component {
         // }
     }
     componentDidMount(){
+        // debugger
         this.props.requestRestaurants()
     }
 
@@ -24,6 +25,7 @@ class RestaurantIndex extends React.Component {
             <div>
                 <Link to="/" style={{ textDecoration: 'none' }}>Home Page</Link>   
                 <Link to="/restaurants" style={{ textDecoration: 'none' }}>Restaurants</Link> 
+                
                 <Search_bar_container/>
                     <div className="indexlayout-container">
                         <div>filter placeholder</div>

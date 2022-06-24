@@ -5,10 +5,10 @@ import { requestRestaurants } from "../../actions/restaurant_actions";
 
 const mSTP = (state) => ({
     restaurants: Object.values(state.entities.restaurants)
-})
+});
 
 const mDTP = (dispatch) => ({
-    requestRestaurants:()=> dispatch(requestRestaurants())
-})
+    requestRestaurants: () => dispatch(requestRestaurants())
+});
 
-export default connect(mSTP,mDTP)(RestaurantIndex)
+export default connect(mSTP, mDTP)(RestaurantIndex);
