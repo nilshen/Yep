@@ -30849,3 +30849,782 @@ Processing by Api::RestaurantsController#index as JSON
 Completed 200 OK in 19ms (Views: 14.6ms | ActiveRecord: 3.1ms)
 
 
+Started GET "/" for ::1 at 2022-06-24 00:52:59 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/linshen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "yoy_O4pGOoEdXkOm9SjLEw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered static_pages/root.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 558ms (Views: 554.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/restaurants" for ::1 at 2022-06-24 00:53:02 -0400
+Processing by Api::RestaurantsController#index as JSON
+  Rendering api/restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (1.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/api/restaurants/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 4], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (2.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 3], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  Rendered api/restaurants/index.json.jbuilder (85.6ms)
+Completed 200 OK in 93ms (Views: 62.0ms | ActiveRecord: 26.8ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2c0b759700e9a82979817f4bf811835291afaa44/rl1.jpeg" for ::1 at 2022-06-24 00:53:02 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0fa0dae20f5d83cd4c9c88689cd6077f534e1a5f/cote1.jpeg" for ::1 at 2022-06-24 00:53:02 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6463d95fda2087bf445cdbe9d0cd86b0f844648f/pf1.jpeg" for ::1 at 2022-06-24 00:53:02 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2cf6ba6017d7ca45ae9eb67dfa34142efbc62120/mh1.jpeg" for ::1 at 2022-06-24 00:53:02 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2c0b759700e9a82979817f4bf811835291afaa44", "filename"=>"rl1"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0fa0dae20f5d83cd4c9c88689cd6077f534e1a5f", "filename"=>"cote1"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ /Users/linshen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (6.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ /Users/linshen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2cf6ba6017d7ca45ae9eb67dfa34142efbc62120", "filename"=>"mh1"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6463d95fda2087bf445cdbe9d0cd86b0f844648f", "filename"=>"pf1"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ /Users/linshen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ /Users/linshen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (17.1ms) [0m[34mGenerated URL for file at key: s1WyHFT9bTXxFhKMhNAiYkf1 (https://active-storage-yep-develop.s3.amazonaws.com/s1WyHFT9bTXxFhKMhNAiYkf1?response-content-disposition=inline%3B%20filename%3D%22rl1.jpeg%22%3B%20filename%2A%3DUTF-8%27%27rl1.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T045302Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=8c0343ffec6376620de745936c014e79c93bd437c705aa64b5e17b91dc4838d8)[0m
+Redirected to https://active-storage-yep-develop.s3.amazonaws.com/s1WyHFT9bTXxFhKMhNAiYkf1?response-content-disposition=inline%3B%20filename%3D%22rl1.jpeg%22%3B%20filename%2A%3DUTF-8%27%27rl1.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T045302Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=8c0343ffec6376620de745936c014e79c93bd437c705aa64b5e17b91dc4838d8
+Completed 302 Found in 23ms (ActiveRecord: 0.4ms)
+
+
+[36m  S3 Storage (9.3ms) [0m[34mGenerated URL for file at key: 7HoCzWzRPkNNY59jM6BAF8c3 (https://active-storage-yep-develop.s3.amazonaws.com/7HoCzWzRPkNNY59jM6BAF8c3?response-content-disposition=inline%3B%20filename%3D%22pf1.jpeg%22%3B%20filename%2A%3DUTF-8%27%27pf1.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T045302Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=6411f1b26b1b0026ce918bec0470b4aae45391be77cebb22b274e9504bb7b26e)[0m
+Redirected to https://active-storage-yep-develop.s3.amazonaws.com/7HoCzWzRPkNNY59jM6BAF8c3?response-content-disposition=inline%3B%20filename%3D%22pf1.jpeg%22%3B%20filename%2A%3DUTF-8%27%27pf1.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T045302Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=6411f1b26b1b0026ce918bec0470b4aae45391be77cebb22b274e9504bb7b26e
+Completed 302 Found in 18ms (ActiveRecord: 1.7ms)
+
+
+[36m  S3 Storage (15.5ms) [0m[34mGenerated URL for file at key: kaMYp1p8an1u6HeByS7TB3ci (https://active-storage-yep-develop.s3.amazonaws.com/kaMYp1p8an1u6HeByS7TB3ci?response-content-disposition=inline%3B%20filename%3D%22mh1.jpeg%22%3B%20filename%2A%3DUTF-8%27%27mh1.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T045302Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=2f61edc1b93f9189eedbbc14ec5252016526710c66961c49877d225f358563cc)[0m
+Redirected to https://active-storage-yep-develop.s3.amazonaws.com/kaMYp1p8an1u6HeByS7TB3ci?response-content-disposition=inline%3B%20filename%3D%22mh1.jpeg%22%3B%20filename%2A%3DUTF-8%27%27mh1.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T045302Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=2f61edc1b93f9189eedbbc14ec5252016526710c66961c49877d225f358563cc
+Completed 302 Found in 20ms (ActiveRecord: 1.1ms)
+
+
+[36m  S3 Storage (18.7ms) [0m[34mGenerated URL for file at key: h26G3NNxAHgskFydLu8UYWCy (https://active-storage-yep-develop.s3.amazonaws.com/h26G3NNxAHgskFydLu8UYWCy?response-content-disposition=inline%3B%20filename%3D%22cote1.jpeg%22%3B%20filename%2A%3DUTF-8%27%27cote1.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T045302Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=5b6a9897c2bfff5487aa3e0a9f0fd32e7a7c95f6a17e3683cab7c2e72d4f162a)[0m
+Redirected to https://active-storage-yep-develop.s3.amazonaws.com/h26G3NNxAHgskFydLu8UYWCy?response-content-disposition=inline%3B%20filename%3D%22cote1.jpeg%22%3B%20filename%2A%3DUTF-8%27%27cote1.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T045302Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=5b6a9897c2bfff5487aa3e0a9f0fd32e7a7c95f6a17e3683cab7c2e72d4f162a
+Completed 302 Found in 33ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bd9c1795a77932523cbf218e850665e3247f97f6/mh2.jpeg" for ::1 at 2022-06-24 00:53:04 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3ab9a1c93ba7f788dea76ac7cb5bab919243957a/mh3.jpeg" for ::1 at 2022-06-24 00:53:04 -0400
+Started GET "/api/restaurants/1" for ::1 at 2022-06-24 00:53:04 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3ab9a1c93ba7f788dea76ac7cb5bab919243957a", "filename"=>"mh3"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bd9c1795a77932523cbf218e850665e3247f97f6", "filename"=>"mh2"}
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /Users/linshen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.6ms) [0m[34mGenerated URL for file at key: QNYWhWbdeDcqPU6mPXX8UnKR (https://active-storage-yep-develop.s3.amazonaws.com/QNYWhWbdeDcqPU6mPXX8UnKR?response-content-disposition=inline%3B%20filename%3D%22mh3.jpeg%22%3B%20filename%2A%3DUTF-8%27%27mh3.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T045304Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=f8bfc9abbcb24bdfcfecd33b67cdb9d601e8e1ebeacd1703abc5446f5d1f3e05)[0m
+Redirected to https://active-storage-yep-develop.s3.amazonaws.com/QNYWhWbdeDcqPU6mPXX8UnKR?response-content-disposition=inline%3B%20filename%3D%22mh3.jpeg%22%3B%20filename%2A%3DUTF-8%27%27mh3.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T045304Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=f8bfc9abbcb24bdfcfecd33b67cdb9d601e8e1ebeacd1703abc5446f5d1f3e05
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+  [1m[36mActiveStorage::Blob Load (3.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /Users/linshen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by Api::RestaurantsController#show as JSON
+[36m  S3 Storage (2.2ms) [0m[34mGenerated URL for file at key: eR4uNEig44tbtzPBzR7PBZdT (https://active-storage-yep-develop.s3.amazonaws.com/eR4uNEig44tbtzPBzR7PBZdT?response-content-disposition=inline%3B%20filename%3D%22mh2.jpeg%22%3B%20filename%2A%3DUTF-8%27%27mh2.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T045304Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ceb4820481ae88ca0722521b777de7edb47e31360d4ea7b27f26351a4783a9c3)[0m
+Redirected to https://active-storage-yep-develop.s3.amazonaws.com/eR4uNEig44tbtzPBzR7PBZdT?response-content-disposition=inline%3B%20filename%3D%22mh2.jpeg%22%3B%20filename%2A%3DUTF-8%27%27mh2.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T045304Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ceb4820481ae88ca0722521b777de7edb47e31360d4ea7b27f26351a4783a9c3
+Completed 302 Found in 8ms (ActiveRecord: 3.3ms)
+
+
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:10
+  Rendering api/restaurants/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/show.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/show.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/show.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/show.json.jbuilder:2
+  Rendered api/restaurants/show.json.jbuilder (9.2ms)
+Completed 200 OK in 15ms (Views: 10.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c2e27613609edd6478a4522b212ea4c92ee8ac3c/cote2.jpeg" for ::1 at 2022-06-24 01:03:22 -0400
+Started GET "/api/restaurants/2" for ::1 at 2022-06-24 01:03:22 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--67c234a5df2c573bf0157d2ed33e4b09721a557f/cote3.jpeg" for ::1 at 2022-06-24 01:03:22 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c2e27613609edd6478a4522b212ea4c92ee8ac3c", "filename"=>"cote2"}
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (2.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ /Users/linshen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--67c234a5df2c573bf0157d2ed33e4b09721a557f", "filename"=>"cote3"}
+  ↳ app/controllers/api/restaurants_controller.rb:10
+  Rendering api/restaurants/show.json.jbuilder
+  [1m[36mActiveStorage::Blob Load (2.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /Users/linshen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Attachment Load (1.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/show.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/show.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/show.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/show.json.jbuilder:2
+  Rendered api/restaurants/show.json.jbuilder (7.0ms)
+Completed 200 OK in 21ms (Views: 10.8ms | ActiveRecord: 3.6ms)
+
+
+[36m  S3 Storage (27.5ms) [0m[34mGenerated URL for file at key: YZCNwqLmgN3qFLMof64JN6Cx (https://active-storage-yep-develop.s3.amazonaws.com/YZCNwqLmgN3qFLMof64JN6Cx?response-content-disposition=inline%3B%20filename%3D%22cote2.jpeg%22%3B%20filename%2A%3DUTF-8%27%27cote2.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T050322Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ec805e634502a34bc200ac7213cd309ac2a5237006fe28b6c34c4d5144690e09)[0m
+Redirected to https://active-storage-yep-develop.s3.amazonaws.com/YZCNwqLmgN3qFLMof64JN6Cx?response-content-disposition=inline%3B%20filename%3D%22cote2.jpeg%22%3B%20filename%2A%3DUTF-8%27%27cote2.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T050322Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ec805e634502a34bc200ac7213cd309ac2a5237006fe28b6c34c4d5144690e09
+Completed 302 Found in 37ms (ActiveRecord: 3.2ms)
+
+
+[36m  S3 Storage (18.7ms) [0m[34mGenerated URL for file at key: akyG4XSDW2zAU2wqHQz2VhbC (https://active-storage-yep-develop.s3.amazonaws.com/akyG4XSDW2zAU2wqHQz2VhbC?response-content-disposition=inline%3B%20filename%3D%22cote3.jpeg%22%3B%20filename%2A%3DUTF-8%27%27cote3.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T050322Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=84f812e81e68ea20985ca7928a68c45dd799f5cf228a60f2d4202cacec1139ec)[0m
+Redirected to https://active-storage-yep-develop.s3.amazonaws.com/akyG4XSDW2zAU2wqHQz2VhbC?response-content-disposition=inline%3B%20filename%3D%22cote3.jpeg%22%3B%20filename%2A%3DUTF-8%27%27cote3.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T050322Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=84f812e81e68ea20985ca7928a68c45dd799f5cf228a60f2d4202cacec1139ec
+Completed 302 Found in 29ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/api/restaurants" for ::1 at 2022-06-24 01:03:28 -0400
+Processing by Api::RestaurantsController#index as JSON
+  Rendering api/restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (1.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/api/restaurants/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 4], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 3], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  Rendered api/restaurants/index.json.jbuilder (18.2ms)
+Completed 200 OK in 23ms (Views: 17.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/api/restaurants/1" for ::1 at 2022-06-24 01:03:29 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3ab9a1c93ba7f788dea76ac7cb5bab919243957a/mh3.jpeg" for ::1 at 2022-06-24 01:03:29 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bd9c1795a77932523cbf218e850665e3247f97f6/mh2.jpeg" for ::1 at 2022-06-24 01:03:29 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bd9c1795a77932523cbf218e850665e3247f97f6", "filename"=>"mh2"}
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /Users/linshen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.7ms) [0m[34mGenerated URL for file at key: eR4uNEig44tbtzPBzR7PBZdT (https://active-storage-yep-develop.s3.amazonaws.com/eR4uNEig44tbtzPBzR7PBZdT?response-content-disposition=inline%3B%20filename%3D%22mh2.jpeg%22%3B%20filename%2A%3DUTF-8%27%27mh2.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T050329Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=576b5160ef02c2de986c5f3740442c6759c2c7e9d8bed90c83383e00baf2bdca)[0m
+Redirected to https://active-storage-yep-develop.s3.amazonaws.com/eR4uNEig44tbtzPBzR7PBZdT?response-content-disposition=inline%3B%20filename%3D%22mh2.jpeg%22%3B%20filename%2A%3DUTF-8%27%27mh2.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T050329Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=576b5160ef02c2de986c5f3740442c6759c2c7e9d8bed90c83383e00baf2bdca
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms)
+
+
+  [1m[36mRestaurant Load (3.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:10
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3ab9a1c93ba7f788dea76ac7cb5bab919243957a", "filename"=>"mh3"}
+  Rendering api/restaurants/show.json.jbuilder
+  [1m[36mActiveStorage::Blob Load (1.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /Users/linshen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.3ms) [0m[34mGenerated URL for file at key: QNYWhWbdeDcqPU6mPXX8UnKR (https://active-storage-yep-develop.s3.amazonaws.com/QNYWhWbdeDcqPU6mPXX8UnKR?response-content-disposition=inline%3B%20filename%3D%22mh3.jpeg%22%3B%20filename%2A%3DUTF-8%27%27mh3.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T050329Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=d7967f4ebaef4d27048cdcb8ae2b126363a62ec221986166735d72978ee03936)[0m
+Redirected to https://active-storage-yep-develop.s3.amazonaws.com/QNYWhWbdeDcqPU6mPXX8UnKR?response-content-disposition=inline%3B%20filename%3D%22mh3.jpeg%22%3B%20filename%2A%3DUTF-8%27%27mh3.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T050329Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=d7967f4ebaef4d27048cdcb8ae2b126363a62ec221986166735d72978ee03936
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+
+
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/show.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/show.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/show.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/show.json.jbuilder:2
+  Rendered api/restaurants/show.json.jbuilder (9.4ms)
+Completed 200 OK in 19ms (Views: 11.5ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/api/restaurants" for ::1 at 2022-06-24 01:03:31 -0400
+Processing by Api::RestaurantsController#index as JSON
+  Rendering api/restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/api/restaurants/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 4], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 3], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  Rendered api/restaurants/index.json.jbuilder (15.3ms)
+Completed 200 OK in 20ms (Views: 16.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ae8da44ea88ea9109261ddb9c425ff2e76296eaa/pf2.jpeg" for ::1 at 2022-06-24 01:03:33 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--007e9da3ffdf476d8f112971a06c0b3d9cf2964f/pf3.jpeg" for ::1 at 2022-06-24 01:03:33 -0400
+Started GET "/api/restaurants/3" for ::1 at 2022-06-24 01:03:33 -0400
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"3"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--007e9da3ffdf476d8f112971a06c0b3d9cf2964f", "filename"=>"pf3"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ae8da44ea88ea9109261ddb9c425ff2e76296eaa", "filename"=>"pf2"}
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ /Users/linshen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.5ms) [0m[34mGenerated URL for file at key: rxoXdHdqTb3qTKCD6GqbXEUH (https://active-storage-yep-develop.s3.amazonaws.com/rxoXdHdqTb3qTKCD6GqbXEUH?response-content-disposition=inline%3B%20filename%3D%22pf3.jpeg%22%3B%20filename%2A%3DUTF-8%27%27pf3.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T050333Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=842ce59191d1540207202993b05d5dea461a6679283e73efed5eaf4d8b1b371c)[0m
+Redirected to https://active-storage-yep-develop.s3.amazonaws.com/rxoXdHdqTb3qTKCD6GqbXEUH?response-content-disposition=inline%3B%20filename%3D%22pf3.jpeg%22%3B%20filename%2A%3DUTF-8%27%27pf3.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T050333Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=842ce59191d1540207202993b05d5dea461a6679283e73efed5eaf4d8b1b371c
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+
+
+  [1m[36mActiveStorage::Blob Load (3.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ /Users/linshen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mRestaurant Load (3.7ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[36m  S3 Storage (2.2ms) [0m[34mGenerated URL for file at key: x8KMGsFveTPyKxuKJ49gPs2v (https://active-storage-yep-develop.s3.amazonaws.com/x8KMGsFveTPyKxuKJ49gPs2v?response-content-disposition=inline%3B%20filename%3D%22pf2.jpeg%22%3B%20filename%2A%3DUTF-8%27%27pf2.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T050333Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ccb1e2da0b0217f063b8387e03883c60687e84632e6ccc0dfe25efb5657962d5)[0m
+Redirected to https://active-storage-yep-develop.s3.amazonaws.com/x8KMGsFveTPyKxuKJ49gPs2v?response-content-disposition=inline%3B%20filename%3D%22pf2.jpeg%22%3B%20filename%2A%3DUTF-8%27%27pf2.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T050333Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ccb1e2da0b0217f063b8387e03883c60687e84632e6ccc0dfe25efb5657962d5
+Completed 302 Found in 7ms (ActiveRecord: 3.3ms)
+
+
+  ↳ app/controllers/api/restaurants_controller.rb:10
+  Rendering api/restaurants/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 3], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/show.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/show.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/show.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/show.json.jbuilder:2
+  Rendered api/restaurants/show.json.jbuilder (5.0ms)
+Completed 200 OK in 19ms (Views: 7.7ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/api/restaurants" for ::1 at 2022-06-24 01:03:36 -0400
+Processing by Api::RestaurantsController#index as JSON
+  Rendering api/restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/api/restaurants/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 4], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 3], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  Rendered api/restaurants/index.json.jbuilder (15.3ms)
+Completed 200 OK in 20ms (Views: 14.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/api/restaurants/4" for ::1 at 2022-06-24 01:03:38 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d059620f44652a00ed3d8b5811b43aa46c21d6ef/rl3.jpeg" for ::1 at 2022-06-24 01:03:38 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bf14362c8bf6cfa544ace9e1fd1a98611ffd112a/rl2.jpeg" for ::1 at 2022-06-24 01:03:38 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bf14362c8bf6cfa544ace9e1fd1a98611ffd112a", "filename"=>"rl2"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d059620f44652a00ed3d8b5811b43aa46c21d6ef", "filename"=>"rl3"}
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ /Users/linshen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.3ms) [0m[34mGenerated URL for file at key: L69brHNCKW5TVdVAMyuyu1qg (https://active-storage-yep-develop.s3.amazonaws.com/L69brHNCKW5TVdVAMyuyu1qg?response-content-disposition=inline%3B%20filename%3D%22rl2.jpeg%22%3B%20filename%2A%3DUTF-8%27%27rl2.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T050338Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=4d57157de05d95a1bbae77b0c48a16f655f4a191af70602374621fa66af94909)[0m
+Redirected to https://active-storage-yep-develop.s3.amazonaws.com/L69brHNCKW5TVdVAMyuyu1qg?response-content-disposition=inline%3B%20filename%3D%22rl2.jpeg%22%3B%20filename%2A%3DUTF-8%27%27rl2.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T050338Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=4d57157de05d95a1bbae77b0c48a16f655f4a191af70602374621fa66af94909
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ /Users/linshen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.1ms) [0m[34mGenerated URL for file at key: qV2oCJKq4chughVGpRNigwSV (https://active-storage-yep-develop.s3.amazonaws.com/qV2oCJKq4chughVGpRNigwSV?response-content-disposition=inline%3B%20filename%3D%22rl3.jpeg%22%3B%20filename%2A%3DUTF-8%27%27rl3.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T050338Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=0cd3d7347bd484f44e9bbc70b6d0e686515cfdc3eb292760a83098c120f4180b)[0m
+Redirected to https://active-storage-yep-develop.s3.amazonaws.com/qV2oCJKq4chughVGpRNigwSV?response-content-disposition=inline%3B%20filename%3D%22rl3.jpeg%22%3B%20filename%2A%3DUTF-8%27%27rl3.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T050338Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=0cd3d7347bd484f44e9bbc70b6d0e686515cfdc3eb292760a83098c120f4180b
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms)
+
+
+  [1m[36mRestaurant Load (2.7ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:10
+  Rendering api/restaurants/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 4], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/show.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/show.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/show.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/show.json.jbuilder:2
+  Rendered api/restaurants/show.json.jbuilder (4.9ms)
+Completed 200 OK in 13ms (Views: 7.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/api/restaurants" for ::1 at 2022-06-24 01:03:44 -0400
+Processing by Api::RestaurantsController#index as JSON
+  Rendering api/restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/api/restaurants/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 4], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 3], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  Rendered api/restaurants/index.json.jbuilder (16.7ms)
+Completed 200 OK in 21ms (Views: 16.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for ::1 at 2022-06-24 01:13:56 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "yoy_O4pGOoEdXkOm9SjLEw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered static_pages/root.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/restaurants" for ::1 at 2022-06-24 01:14:00 -0400
+Processing by Api::RestaurantsController#index as JSON
+  Rendering api/restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/api/restaurants/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 4], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 3], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  Rendered api/restaurants/index.json.jbuilder (18.9ms)
+Completed 200 OK in 24ms (Views: 18.1ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6463d95fda2087bf445cdbe9d0cd86b0f844648f/pf1.jpeg" for ::1 at 2022-06-24 01:14:00 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2c0b759700e9a82979817f4bf811835291afaa44/rl1.jpeg" for ::1 at 2022-06-24 01:14:00 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2cf6ba6017d7ca45ae9eb67dfa34142efbc62120/mh1.jpeg" for ::1 at 2022-06-24 01:14:00 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0fa0dae20f5d83cd4c9c88689cd6077f534e1a5f/cote1.jpeg" for ::1 at 2022-06-24 01:14:00 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2c0b759700e9a82979817f4bf811835291afaa44", "filename"=>"rl1"}
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ /Users/linshen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2cf6ba6017d7ca45ae9eb67dfa34142efbc62120", "filename"=>"mh1"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6463d95fda2087bf445cdbe9d0cd86b0f844648f", "filename"=>"pf1"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ /Users/linshen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (1.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ /Users/linshen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0fa0dae20f5d83cd4c9c88689cd6077f534e1a5f", "filename"=>"cote1"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ /Users/linshen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (35.7ms) [0m[34mGenerated URL for file at key: s1WyHFT9bTXxFhKMhNAiYkf1 (https://active-storage-yep-develop.s3.amazonaws.com/s1WyHFT9bTXxFhKMhNAiYkf1?response-content-disposition=inline%3B%20filename%3D%22rl1.jpeg%22%3B%20filename%2A%3DUTF-8%27%27rl1.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T051400Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=86160ea2fe9ff5ceba3aac885aab9e36e1a03806515169c2844ca040728c3f91)[0m
+[36m  S3 Storage (21.1ms) [0m[34mGenerated URL for file at key: kaMYp1p8an1u6HeByS7TB3ci (https://active-storage-yep-develop.s3.amazonaws.com/kaMYp1p8an1u6HeByS7TB3ci?response-content-disposition=inline%3B%20filename%3D%22mh1.jpeg%22%3B%20filename%2A%3DUTF-8%27%27mh1.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T051400Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=6a500b299f4e2165a5f2a0c41aa59eca4ce4232e0e4f05abd80050d9a718e0d5)[0m
+Redirected to https://active-storage-yep-develop.s3.amazonaws.com/kaMYp1p8an1u6HeByS7TB3ci?response-content-disposition=inline%3B%20filename%3D%22mh1.jpeg%22%3B%20filename%2A%3DUTF-8%27%27mh1.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T051400Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=6a500b299f4e2165a5f2a0c41aa59eca4ce4232e0e4f05abd80050d9a718e0d5
+Completed 302 Found in 29ms (ActiveRecord: 2.9ms)
+
+
+[36m  S3 Storage (17.9ms) [0m[34mGenerated URL for file at key: h26G3NNxAHgskFydLu8UYWCy (https://active-storage-yep-develop.s3.amazonaws.com/h26G3NNxAHgskFydLu8UYWCy?response-content-disposition=inline%3B%20filename%3D%22cote1.jpeg%22%3B%20filename%2A%3DUTF-8%27%27cote1.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T051400Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=2d27900aaf000d6b312a905f5aac2b247a659bd63d8610c4b05bac3583a21712)[0m
+[36m  S3 Storage (25.7ms) [0m[34mGenerated URL for file at key: 7HoCzWzRPkNNY59jM6BAF8c3 (https://active-storage-yep-develop.s3.amazonaws.com/7HoCzWzRPkNNY59jM6BAF8c3?response-content-disposition=inline%3B%20filename%3D%22pf1.jpeg%22%3B%20filename%2A%3DUTF-8%27%27pf1.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T051400Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=cb4442136b100578395f66276c8d7276fef2d6f3a4b07e14d40c69e08f7672e3)[0m
+Redirected to https://active-storage-yep-develop.s3.amazonaws.com/s1WyHFT9bTXxFhKMhNAiYkf1?response-content-disposition=inline%3B%20filename%3D%22rl1.jpeg%22%3B%20filename%2A%3DUTF-8%27%27rl1.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T051400Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=86160ea2fe9ff5ceba3aac885aab9e36e1a03806515169c2844ca040728c3f91
+Redirected to https://active-storage-yep-develop.s3.amazonaws.com/7HoCzWzRPkNNY59jM6BAF8c3?response-content-disposition=inline%3B%20filename%3D%22pf1.jpeg%22%3B%20filename%2A%3DUTF-8%27%27pf1.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T051400Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=cb4442136b100578395f66276c8d7276fef2d6f3a4b07e14d40c69e08f7672e3
+Completed 302 Found in 29ms (ActiveRecord: 0.9ms)
+
+
+Completed 302 Found in 44ms (ActiveRecord: 1.0ms)
+
+
+Redirected to https://active-storage-yep-develop.s3.amazonaws.com/h26G3NNxAHgskFydLu8UYWCy?response-content-disposition=inline%3B%20filename%3D%22cote1.jpeg%22%3B%20filename%2A%3DUTF-8%27%27cote1.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T051400Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=2d27900aaf000d6b312a905f5aac2b247a659bd63d8610c4b05bac3583a21712
+Completed 302 Found in 23ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3ab9a1c93ba7f788dea76ac7cb5bab919243957a/mh3.jpeg" for ::1 at 2022-06-24 01:14:02 -0400
+Started GET "/api/restaurants/1" for ::1 at 2022-06-24 01:14:02 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bd9c1795a77932523cbf218e850665e3247f97f6/mh2.jpeg" for ::1 at 2022-06-24 01:14:02 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3ab9a1c93ba7f788dea76ac7cb5bab919243957a", "filename"=>"mh3"}
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bd9c1795a77932523cbf218e850665e3247f97f6", "filename"=>"mh2"}
+  [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /Users/linshen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.6ms) [0m[34mGenerated URL for file at key: QNYWhWbdeDcqPU6mPXX8UnKR (https://active-storage-yep-develop.s3.amazonaws.com/QNYWhWbdeDcqPU6mPXX8UnKR?response-content-disposition=inline%3B%20filename%3D%22mh3.jpeg%22%3B%20filename%2A%3DUTF-8%27%27mh3.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T051402Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=8579fbea152fe852ac2e86aa0f480e28b7444350bbef891db1a36cee137196f6)[0m
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+Redirected to https://active-storage-yep-develop.s3.amazonaws.com/QNYWhWbdeDcqPU6mPXX8UnKR?response-content-disposition=inline%3B%20filename%3D%22mh3.jpeg%22%3B%20filename%2A%3DUTF-8%27%27mh3.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T051402Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=8579fbea152fe852ac2e86aa0f480e28b7444350bbef891db1a36cee137196f6
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+  [1m[36mRestaurant Load (3.9ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:10
+  ↳ /Users/linshen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.7ms) [0m[34mGenerated URL for file at key: eR4uNEig44tbtzPBzR7PBZdT (https://active-storage-yep-develop.s3.amazonaws.com/eR4uNEig44tbtzPBzR7PBZdT?response-content-disposition=inline%3B%20filename%3D%22mh2.jpeg%22%3B%20filename%2A%3DUTF-8%27%27mh2.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T051402Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=b7351305dea7b4e1c986a0bfb803105b912d910dae1279d29c9cd49e5ecb52df)[0m
+Redirected to https://active-storage-yep-develop.s3.amazonaws.com/eR4uNEig44tbtzPBzR7PBZdT?response-content-disposition=inline%3B%20filename%3D%22mh2.jpeg%22%3B%20filename%2A%3DUTF-8%27%27mh2.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3GZ6NZPCR73UZRVL%2F20220624%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220624T051402Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=b7351305dea7b4e1c986a0bfb803105b912d910dae1279d29c9cd49e5ecb52df
+Completed 302 Found in 14ms (ActiveRecord: 0.5ms)
+
+
+  Rendering api/restaurants/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (1.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/show.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/show.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/show.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/show.json.jbuilder:2
+  Rendered api/restaurants/show.json.jbuilder (13.7ms)
+Completed 200 OK in 29ms (Views: 19.1ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/api/restaurants" for ::1 at 2022-06-24 01:14:04 -0400
+Processing by Api::RestaurantsController#index as JSON
+  Rendering api/restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/api/restaurants/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 4], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 3], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  Rendered api/restaurants/index.json.jbuilder (25.1ms)
+Completed 200 OK in 31ms (Views: 24.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/api/restaurants" for ::1 at 2022-06-24 01:14:07 -0400
+Processing by Api::RestaurantsController#index as JSON
+  Rendering api/restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/api/restaurants/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 4], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 3], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  Rendered api/restaurants/index.json.jbuilder (15.9ms)
+Completed 200 OK in 21ms (Views: 16.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/api/restaurants" for ::1 at 2022-06-24 01:14:09 -0400
+Processing by Api::RestaurantsController#index as JSON
+  Rendering api/restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/api/restaurants/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 4], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 3], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  Rendered api/restaurants/index.json.jbuilder (13.5ms)
+Completed 200 OK in 19ms (Views: 14.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/restaurants" for ::1 at 2022-06-24 01:14:11 -0400
+Processing by Api::RestaurantsController#index as JSON
+  Rendering api/restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/api/restaurants/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 4], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 3], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  Rendered api/restaurants/index.json.jbuilder (14.1ms)
+Completed 200 OK in 19ms (Views: 15.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/restaurants" for ::1 at 2022-06-24 01:14:14 -0400
+Processing by Api::RestaurantsController#index as JSON
+  Rendering api/restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/api/restaurants/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 4], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 3], ["record_type", "Restaurant"], ["name", "photos"]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/api/restaurants/index.json.jbuilder:4
+  Rendered api/restaurants/index.json.jbuilder (12.4ms)
+Completed 200 OK in 17ms (Views: 13.2ms | ActiveRecord: 2.7ms)
+
+
