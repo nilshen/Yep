@@ -1,6 +1,6 @@
 import React from 'react';
 import * as Demo from './demo_user_login'
-
+import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -28,11 +28,11 @@ class SessionForm extends React.Component {
 
   handleDemoUser(e) {
     e.preventDefault();
-    debugger
+    // debugger
     const user = Demo.setDemoUser()
-    debugger
+    // debugger
     this.props.processForm(user)
-    debugger
+    // debugger
   }
 
 
@@ -60,6 +60,7 @@ class SessionForm extends React.Component {
 
     return (
       <div className="login-form-container">
+        <Link to="/">Home Page</Link>
         <form onSubmit={this.handleSubmit} className="login-form-box">
           Welcome to Yep!
           <br/>

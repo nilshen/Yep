@@ -1,0 +1,13 @@
+.show-pics {
+    display: flex;
+    z-index: -999;
+    margin-top: -30px;
+}
+
+
+.show-pic{
+    width: 33.3%;
+    height: 330px;
+    object-fit: cover;
+    filter: brightness(80%);
+}

@@ -1,0 +1,32 @@
+div:link {
+    text-decoration: none
+}
+
+.index-item-container {
+    display: flex;
+    
+}
+
+.index-item-individual {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.index-pic {
+    object-fit: cover;
+    width: 220px;
+    height: 220px;
+    margin-top: 3px;
+    border-radius: 5px;
+}
+
+.index-item-individual-details {
+    display: flex;
+
+}
+
+.index-item-individual-details-cat {
+
+}
+

@@ -7,9 +7,16 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <%= favicon_link_tag ('favicon.png') %>
   </head>
 
   <body>
+    <script>
+      window.headerphoto = "<%= image_url('headerpics.jpeg') %>";
+      window.footerphoto = "<%= image_url('footerphoto.jpeg') %>";
+    </script>
+
+
     <%= yield %>
   </body>
 </html>
