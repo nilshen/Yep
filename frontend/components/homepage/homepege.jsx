@@ -31,13 +31,13 @@ class Homepage extends React.Component {
       <div className='homepage-container'>
         <header className='header'>
 
-          <nav className="header-left"> 
-            <Link>Write a Review</Link>
-            <Link to="/restaurants">Restaurants</Link>
+          <nav className="header-left">
+            <Link to="/restaurants" style={{ textDecoration: 'none' }}>Restaurants</Link> 
+            {/* <p>Write a Review</p> */}
           </nav>
 
           <nav className="header-middle"> 
-            <Link to="/">Home Page</Link>
+            <Link to="/" style={{ textDecoration: 'none' }}>Home Page</Link>
           </nav>
 
           <nav className="header-right"> 

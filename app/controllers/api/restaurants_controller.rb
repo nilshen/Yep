@@ -1,7 +1,9 @@
 class Api::RestaurantsController < ApplicationController
 
     def index
+        # debugger
         @restaurants = Restaurant.all
+        # debugger
     end
 
     def show
