@@ -11,7 +11,22 @@ function SearchBar (props) {
         props.requestRestaurants()
     }, [])
 
-let {restaurants} = props
+    // console.log(props)
+    // console.log(state)
+
+    // const searchClick = handleSearch((e)=> {
+    //     e.preventDefault();
+    //     let searchUrl = props.input
+    //     if (searchUrl === "") {
+    //         searchUrl = '/restaurants'
+    //     } else {
+    //         searchUrl = `/restaurants/search/${searchUrl}`
+    //     }
+    //     props.history.push(`${searchUrl}`)
+    // })
+
+
+    let {restaurants} = props
 
 
         return (

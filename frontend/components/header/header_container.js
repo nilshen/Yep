@@ -13,7 +13,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
-  requestRestaurants: ()=>dispatch(requestRestaurants())
+  requestRestaurants: (input)=>dispatch(requestRestaurants(input))
 });
 
 export default connect(

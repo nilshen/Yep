@@ -20,8 +20,8 @@ export const receiveRestaurant = (restaurant) => {
 }
 
 //thunk action creator
-export const requestRestaurants = () => dispatch => {
-    return RestaurantAPIUtil.fetchRestaurants()
+export const requestRestaurants = (input) => dispatch => {
+    return RestaurantAPIUtil.fetchRestaurants(input)
         .then((restaurants) => dispatch(receiveAllRestaurants(restaurants)))
 }
 

@@ -10,7 +10,7 @@ const mSTP = (state, ownProps) => ({
 
 const mDTP = (dispatch) =>({
     requestRestaurant: (restaurantId) => dispatch(requestRestaurant(restaurantId)),
-    requestRestaurants:()=>dispatch(requestRestaurants())
+    requestRestaurants:(input)=>dispatch(requestRestaurants(input))
 
 })
 
