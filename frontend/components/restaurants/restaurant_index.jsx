@@ -3,6 +3,7 @@ import RestaurantIndexItem from './restaurant_index_item';
 import Search_bar_container from "../search_bar/search_bar_container";
 import { Link } from 'react-router-dom';
 import Header from "../header/header";
+import {Footer} from '../footer/footer'
 
 class RestaurantIndex extends React.Component {
     constructor(props){
@@ -42,6 +43,9 @@ class RestaurantIndex extends React.Component {
                         </ul>
                         <div>Google Map placeholder</div>
                     
+                    </div>
+                    <div>
+                        <Footer/>
                     </div>
             </div>
         );

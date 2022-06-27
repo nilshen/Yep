@@ -11,3 +11,30 @@
     object-fit: cover;
     filter: brightness(80%);
 }
+
+
+.show-header {
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // grid-auto-rows: 1fr;
+    // grid-template-columns: repeat(4, 1fr);
+    // grid-column-gap: 100px;
+
+}
+
+.show-header-item{
+    display: flex;
+    
+    flex-direction: row;
+
+    align-self: stretch;
+}
+
+
+.show-logo {
+    margin: 0px;
+    width: 90px;
+    height: 80px;
+}
