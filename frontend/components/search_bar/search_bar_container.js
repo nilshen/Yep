@@ -4,7 +4,7 @@ import { withRouter } from "react-router";
 import { requestRestaurants } from "../../actions/restaurant_actions";
 
 
-const mSTP = (state) => {
+const mSTP = (state, ownProps) => {
     return {
         restaurants: Object.values(state.entities.restaurants)
     }
@@ -16,4 +16,4 @@ const mDTP = (dispatch) => ({
 });
 
 
-export default (connect(mSTP, mDTP)(SearchBar));
+export default withRouter(connect(mSTP, mDTP)(SearchBar));

@@ -79,9 +79,10 @@ class Homepage extends React.Component {
 
             </div>
             <div className="cat-box">
-        
-              <img className='cat-box-pic' src="https://yep-seeds.s3.amazonaws.com/images/steakhouse.png"></img>
-           
+              <Link to="restaurants/?search=steakhouse">
+                    <img className='cat-box-pic' src="https://yep-seeds.s3.amazonaws.com/images/steakhouse.png"></img>
+              </Link>
+          
             <h3 className='cat-box-font'>Steak</h3>
             </div>
             <div className="cat-box">

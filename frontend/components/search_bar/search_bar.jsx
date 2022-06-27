@@ -1,36 +1,41 @@
 import React, {useState, useEffect} from "react";
 import { FiSearch } from "react-icons/fi"
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
-function SearchBar (props) {
-    const [searchTerm1, setSearchTerm1] = useState("")
-    // const [searchTerm2, setSearchTerm2] = useState("")
+class SearchBar extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            input: ''
+    }
 
-    useEffect(()=>{
-        // debugger    
-        props.requestRestaurants()
-    }, [])
+    this.handleSearch = this.handleSearch.bind(this);
+    }
 
-    // console.log(props)
-    // console.log(state)
+    update(field) {
+        return e => this.setState({ [field]: e.currentTarget.value })
+    }
 
-    // const searchClick = handleSearch((e)=> {
-    //     e.preventDefault();
-    //     let searchUrl = props.input
-    //     if (searchUrl === "") {
-    //         searchUrl = '/restaurants'
-    //     } else {
-    //         searchUrl = `/restaurants/search/${searchUrl}`
-    //     }
-    //     props.history.push(`${searchUrl}`)
-    // })
+    handleSearch(e) {
+        e.preventDefault();
+        let searchInput = this.state.input
+        if (searchInput === '') {
+            searchInput = `/businesses`
+        } else {
+            searchInput = `/businesses/search/${searchInput}`
+        }
+        this.props.history.push(`${searchInput}`)
+    }
+
+    // componentDidMount() {
+    //     // debugger    
+    //     this.props.requestRestaurants()
+    // }
 
 
-    let {restaurants} = props
-
-
+    render () {
+        let {restaurants} = this.props
         return (
-
             <div className="searchbar-container">
                 <div className="searchbar-container-bar">
                 <p className="searchbar-restaurant">
@@ -38,9 +43,8 @@ function SearchBar (props) {
                     type="text" 
                     className="searchbar-default"
                     placeholder="Restaurants..."
-                    onChange={(e) => {
-                        setSearchTerm1(e.target.value)
-                    }}
+                    onChange={this.update('input')}
+                    value={this.state.input}
                     />
                 </p>
                 <p className="searchbar-location">
@@ -50,80 +54,40 @@ function SearchBar (props) {
                     readOnly placeholder="New York, NY"
                     />
                 </p>
-                
-                    <FiSearch className="searchbar-icon"/>
-
+                    <FiSearch onClick={this.handleSearch} className="searchbar-icon"/>
                 </div>
                 
                 <div className="searchbar-container-result">
                     <ul>
                         {restaurants.filter((restaurant)=>{
-                            if (searchTerm1 === "") {
+                            if (this.state.input === "") {
                                 return ""
-                            } else if (restaurant.name.toLowerCase().includes(searchTerm1.toLowerCase())){
+                            } else if (restaurant.name.toLowerCase().includes(this.state.input.toLowerCase())){
                                 return restaurant
-                            } else if (restaurant.category.toLowerCase().includes(searchTerm1.toLowerCase())){
+                            } else if (restaurant.category.toLowerCase().includes(this.state.input.toLowerCase())){
                                 return restaurant
                             } 
-                            // else if (restaurant.city.toLowerCase().includes(searchTerm2.toLowerCase())){
-                            //     return restaurant
-                            // } 
-                        }).map((restaurant,key) => {
-                            return (
-                                <div key={key}>
-                                    <img className='index-pic' src={restaurant.photoUrls[0]} />
-                                    {restaurant.name}
-                                    {/* <Link to={`/restaurants/${restaurant.id}`} className="index-item" style={{ textDecoration: 'none' }}></Link> */}
+                        }).map((restaurant) => (
+                            <Link to={`/restaurants/${restaurant.id}`} className="index-item" style={{ textDecoration: 'none' }} key={restaurant.id}>
+                            <div className='index-item-container'>
+                                <img className='index-pic' src={restaurant.photoUrls[0]} />
+                                <div className='index-item-individual'>
+                                    <h3>{restaurant.name}</h3>
+                                    <div className='index-item-individual-details'>
+                                        <div className='index-item-individual-details-cat'>{restaurant.category}</div>
+                                        <div>{restaurant.price}</div>
+                                    </div>
+                                    <div className="index-item-individual-hour">Hours: {restaurant.hours}</div>
                                 </div>
-                                
-                            )
-                        })}
+                            </div>
+                            </Link>
+                        ))}
                     </ul>
                 </div>
             </div>
-           
         );
+    }
 }
 
+
 export default SearchBar;
-
-
-
-// class SearchBar extends React.Component {
-//     constructor(props){
-//         super(props)
-//     }
-
-//     componentDidMount(){
-//         // debugger    
-//         this.props.requestRestaurants()
-//     }
-
-//     render() { 
-//         // debugger
-//         let {restaurants} = this.props
-//         console.log(restaurants)
-//         // console.log(this.props)
-//         return (
-//             <div className="searchbar-container">
-//                 <p className="searchbar-restaurant">
-//                     <input 
-//                     type="text" 
-//                     placeholder="Restaurants..."
-                    
-//                     />
-//                 </p>
-
-//                 <p className="searchbar-location">
-//                     <input 
-//                     type="text" 
-//                     placeholder="New York, NY"
-//                     />
-//                 </p>
-//                 <FiSearch className="searchbar-icon"/>
-//             </div>
-//         );
-//     }
-// }
-
-// export default SearchBar;
