@@ -43,7 +43,7 @@ let {restaurants} = props
                 <div className="searchbar-container-result">
                     <ul>
                         {restaurants.filter((restaurant)=>{
-                            if (searchTerm1 == "") {
+                            if (searchTerm1 === "") {
                                 return ""
                             } else if (restaurant.name.toLowerCase().includes(searchTerm1.toLowerCase())){
                                 return restaurant

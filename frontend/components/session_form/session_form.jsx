@@ -2,6 +2,7 @@ import React from 'react';
 import * as Demo from './demo_user_login'
 import { Link } from 'react-router-dom';
 import Header from '../header/header';
+import {Footer} from '../footer/footer'
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -51,6 +52,34 @@ class SessionForm extends React.Component {
     // debugger
   }
 
+  sessionMessegeTop(){
+    // debugger
+    if (this.props.formType === "login") {
+      return (
+        <div className='sessoion-top'>
+          <div>
+            <div className='session-topwords'>New to Yep?</div> 
+            <div><Link to={"/signup"} style={{ textDecoration: 'none' }} className="session-topwords2">Sign Up</Link></div>
+          </div>
+          <div className='term'>By logging in, you agree to Yep’s Terms of Service and Privacy Policy.</div>
+          
+        </div>
+      )
+    } else {
+      return (
+         <div className='sessoion-top'>
+            <div className='session-topwords'>Sign Up for Yep</div>
+            <div className='session-topwords-2'>Connect with great local restaurants</div>
+            <div><p className='term'>By logging in, you agree to Yep’s Terms of Service and Privacy Policy.</p></div>
+         </div>
+         
+      )
+    }
+  }
+
+
+
+
   render() {
 
     const demoLogin = (
@@ -68,23 +97,26 @@ class SessionForm extends React.Component {
      <div className='session-body'>
       <div className='session-form-left'>
         <form onSubmit={this.handleSubmit} className="session-form-box">
-          <h2 className='session-form-header'>Welcome to Yep!</h2>
+          {/* <h2 className='session-form-header'>Welcome to Yep!</h2> */}
           <br/>
-          Please {this.props.formType} or {this.props.navLink}
+          {/* Please {this.props.formType} or {this.props.navLink} */}
+          {this.sessionMessegeTop()}
           {this.renderErrors()}
           <div className="login-form">
             <br/>
-            <label>Username:
+            <label>
               <input type="text"
                 value={this.state.username}
+                placeholder="Username"
                 onChange={this.update('username')}
                 className="login-input"
               />
             </label>
             <br/>
-            <label>Password:
+            <label>
               <input type="password"
                 value={this.state.password}
+                placeholder="Password"
                 onChange={this.update('password')}
                 className="login-input"
               />
@@ -99,6 +131,7 @@ class SessionForm extends React.Component {
           <img src="https://yep-seeds.s3.amazonaws.com/images/session-pic.png" width="280" height="250" />
         </div>
         </div>
+        <Footer/>
       </div>
     );
   }

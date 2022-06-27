@@ -4,8 +4,8 @@
     // justify-content:center;
     // align-items: center;
     background-image: url("https://yep-seeds.s3.amazonaws.com/images/footer.png");
-    height: 150px;
-    width: 700px;
+    height: 140px;
+    width: 650px;
     background-repeat: no-repeat;
     margin: 0 auto;
     // margin: 0 auto;
@@ -14,15 +14,18 @@
 
 
 .footer {
+        margin-top: 50px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         border-top: 1px solid #CCCCCC;
+        // width: 700px;
     }
     
     .footer-row{
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: center;
         
         
     }
