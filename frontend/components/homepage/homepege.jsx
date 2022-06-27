@@ -48,7 +48,7 @@ class Homepage extends React.Component {
       <div className='homepage-container-top'>
         <div className='header-container'>
           <nav className="header-left">
-            <Link to="/restaurants" style={{ textDecoration: 'none' }}> Local Businesses</Link> 
+            <Link to="/restaurants" style={{ textDecoration: 'none' }}>Restaurants</Link> 
             {/* <p>Write a Review</p> */}
           </nav>
           <nav className="header-middle"> 
@@ -72,43 +72,44 @@ class Homepage extends React.Component {
             <div className='cat-boxes'>
             <div className='cat-boxes-row1'>
             <div className="cat-box">
-        
-              <img src="https://yep-seeds.s3.amazonaws.com/images/cat_rest.svg"></img>
-           
-            <h3 className='cat-box-font'>Restaurants</h3>
-            </div>
-            <div className="cat-box">
             
-              <img src="https://yep-seeds.s3.amazonaws.com/images/cat_shopping.svg"></img>
+              <img className='cat-box-pic' src="https://yep-seeds.s3.amazonaws.com/images/sushi.png"></img>
                 
-            <h2 className='cat-box-font'>Shopping</h2>
+            <h2 className='cat-box-font'>Sushi</h2>
+
+            </div>
+            <div className="cat-box">
+        
+              <img className='cat-box-pic' src="https://yep-seeds.s3.amazonaws.com/images/steakhouse.png"></img>
+           
+            <h3 className='cat-box-font'>Steak</h3>
             </div>
             <div className="cat-box">
             
-              <img src="https://yep-seeds.s3.amazonaws.com/images/cat_nightlife.svg"></img>
+              <img className='cat-box-pic' src="https://yep-seeds.s3.amazonaws.com/images/drinks.png"></img>
 
-            <h3 className='cat-box-font'>Nightlife</h3>
+            <h3 className='cat-box-font'>Bars & Lounges</h3>
             </div>
             </div>
 
             <div className='cat-boxes-row1'>
             <div className="cat-box">
               
-              <img src="https://yep-seeds.s3.amazonaws.com/images/cat_beauty_Spas.svg"></img>
+              <img className='cat-box-pic' src="https://yep-seeds.s3.amazonaws.com/images/burger.png"></img>
             
-            <h3 className='cat-box-font'>Beauty & Spas</h3>
+            <h3 className='cat-box-font'>Burger</h3>
             </div>
             <div className="cat-box">
               
-              <img src="https://yep-seeds.s3.amazonaws.com/images/cat_automotive.svg"></img>
+              <img className='cat-box-pic' src="https://yep-seeds.s3.amazonaws.com/images/Dessert.png"></img>
               
-            <h3 className='cat-box-font'>Automotive</h3>
+            <h3 className='cat-box-font'>Dessert</h3>
             </div>
             <div className="cat-box">
 
-                <img src="https://yep-seeds.s3.amazonaws.com/images/cat_home+services.svg"></img>
+                <img className='cat-box-pic' src="https://yep-seeds.s3.amazonaws.com/images/coffee.png"></img>
       
-              <h3 className='cat-box-font'>Home Services</h3>
+              <h3 className='cat-box-font'>Coffee</h3>
             </div>
             </div>
           

@@ -34,7 +34,7 @@ class Header extends React.Component {
       <div className='homepage-container-top'>
         <div className='header-container'>
           <nav className="header-left">
-            <Link to="/restaurants" style={{ textDecoration: 'none' }}>Local Businesses</Link> 
+            <Link to="/restaurants" style={{ textDecoration: 'none' }}>Restaurants</Link> 
             {/* <p>Write a Review</p> */}
           </nav>
           <nav className="header-middle"> 
