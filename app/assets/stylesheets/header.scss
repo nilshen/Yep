@@ -37,6 +37,21 @@
 
 .header-right > * {
     font-size: 14px;
-    margin-right: 1rem;
+    // margin-right: 1rem;
     z-index: 100;
+
+}
+
+
+.login-font {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-left: 20px;
+    border-radius: 4px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 14px;
 }

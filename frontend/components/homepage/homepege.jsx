@@ -28,8 +28,8 @@ class Homepage extends React.Component {
         <header className='header'>
   
           <nav className="header-right">
-            <Link to="/login"><button>Log In</button></Link>
-            <Link to="/signup"><button>Sign Up</button></Link>
+            <Link to="/login" style={{ textDecoration: 'none' }} className='login-font'>Log In</Link>
+            <Link to="/signup" style={{ textDecoration: 'none' }} className='login-font'>Sign Up</Link>
           </nav>
         </header>
         </div>
