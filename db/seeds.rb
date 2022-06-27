@@ -7,12 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
 #users reset including ID
+# User.reset_pk_sequence
 User.destroy_all
-User.reset_pk_sequence
 
 #restaurants reset including ID
+# Restaurant.reset_pk_sequence
 Restaurant.destroy_all
-Restaurant.reset_pk_sequence
 
 
 #User Seeds
