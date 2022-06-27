@@ -4,14 +4,14 @@ class Api::RestaurantsController < ApplicationController
         # debugger
         if params[:input]
             @restaurants = Restaurant.where("category ILIKE ? OR name ILIKE ?", "%#{params[:input]}%", "%#{params[:input]}%")
-            if @restaurants 
+            if @restaurants.length > 0
                 render :index
             else
                 render json: ["No result is found for #{params[:input]}, please try again with restaurant name or category"], status: 422
             end
         else
-        @restaurants = Restaurant.all
-        render :index
+            @restaurants = Restaurant.all
+            render :index
         # debugger
         end
     end

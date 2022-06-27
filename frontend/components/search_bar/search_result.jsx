@@ -1,8 +1,8 @@
 import React from "react";
-
+import Header from "../header/header";
 import Search_bar_container from "./search_bar_container";
 import { Link } from "react-router-dom";
-import Footer from "../footer/footer";
+import {Footer} from "../footer/footer";
 
 
 class SearchResult extends React.Component {

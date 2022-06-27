@@ -14,14 +14,14 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import restaurantShowContainer from './restaurants/restaurant_show_container';
 import RestaurantIndexContainer from './restaurants/restaurant_index_container';
-import search_result_container from './search_bar/search_result_container';
+import searchResultContainer from './search_bar/search_result_container';
 
 const App = () => (
   <div>
     <Switch>
       <AuthRoute path="/login" component={LogInFormContainer} />
       <AuthRoute path="/signup" component={SignUpFormContainer} />
-      <Route path="/restrants/search/:input" component={search_result_container} />
+      <Route path="/restaurants/search/:input" component={searchResultContainer} />
       <Route path="/restaurants/:restaurantId" component={restaurantShowContainer} />
       <Route exact path="/restaurants" component={RestaurantIndexContainer} />
       <Route  path="/" component={HomepageContainer}/>
