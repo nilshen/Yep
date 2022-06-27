@@ -66,15 +66,60 @@ class Homepage extends React.Component {
           <div>
             <Search_bar_container/>
           </div>
-              <div className='rest-cat-header'>Find restaurants by category</div>
-              {rest_cat.map((el,idx)=>{
-                return (
-                  <ul className="rest-cat" key={idx}>{el}</ul>
-                )
-              })}
+          </div>
+          <div className='cat-container'>
+            <h2 className='cat-header'>Categories</h2>
+            <div className='cat-boxes'>
+            <div className='cat-boxes-row1'>
+            <div className="cat-box">
+        
+              <img src="https://yep-seeds.s3.amazonaws.com/images/cat_rest.svg"></img>
+           
+            <h3 className='cat-box-font'>Restaurants</h3>
+            </div>
+            <div className="cat-box">
+            
+              <img src="https://yep-seeds.s3.amazonaws.com/images/cat_shopping.svg"></img>
+                
+            <h2 className='cat-box-font'>Shopping</h2>
+            </div>
+            <div className="cat-box">
+            
+              <img src="https://yep-seeds.s3.amazonaws.com/images/cat_nightlife.svg"></img>
+
+            <h3 className='cat-box-font'>Nightlife</h3>
+            </div>
+            </div>
+
+            <div className='cat-boxes-row1'>
+            <div className="cat-box">
+              
+              <img src="https://yep-seeds.s3.amazonaws.com/images/cat_beauty_Spas.svg"></img>
+            
+            <h3 className='cat-box-font'>Beauty & Spas</h3>
+            </div>
+            <div className="cat-box">
+              
+              <img src="https://yep-seeds.s3.amazonaws.com/images/cat_automotive.svg"></img>
+              
+            <h3 className='cat-box-font'>Automotive</h3>
+            </div>
+            <div className="cat-box">
+
+                <img src="https://yep-seeds.s3.amazonaws.com/images/cat_home+services.svg"></img>
+      
+              <h3 className='cat-box-font'>Home Services</h3>
+            </div>
+            </div>
+          
+        </div>
+
+
+              
             <div>
               <Footer/>
             </div>
+          
           </div>
         </div>
     )
@@ -83,3 +128,12 @@ class Homepage extends React.Component {
 
 export default Homepage;
 
+
+// category with mapping but hard to format
+
+              {/* <div className='rest-cat-header'>Categories</div>
+              {rest_cat.map((el,idx)=>{
+                return (
+                  <ul className="rest-cat" key={idx}>{el}</ul>
+                )
+              })} */}
