@@ -2,6 +2,7 @@ import React from "react";
 import RestaurantIndexItem from './restaurant_index_item';
 import Search_bar_container from "../search_bar/search_bar_container";
 import { Link } from 'react-router-dom';
+import Header from "../header/header";
 
 class RestaurantIndex extends React.Component {
     constructor(props){
@@ -23,8 +24,9 @@ class RestaurantIndex extends React.Component {
         // console.log(this.state)
         return (
             <div>
-                <Link to="/" style={{ textDecoration: 'none' }}>Home Page</Link>   
-                <Link to="/restaurants" style={{ textDecoration: 'none' }}>Restaurants</Link> 
+                <div>
+                    <Header/>
+                </div>
                 
                 <Search_bar_container/>
                     <div className="indexlayout-container">

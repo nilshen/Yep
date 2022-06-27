@@ -1,0 +1,42 @@
+.footer-pic{
+    // display: flex;
+    // flex-direction: row;
+    // justify-content:center;
+    // align-items: center;
+    height: 150px;
+    background-image: url("https://yep-seeds.s3.amazonaws.com/images/footer.png");
+    background-position: right 70%;
+    background-size: cover;
+    background-repeat: none;
+    // margin: 0 auto;
+    // object-fit: cover;
+}
+
+
+.footer {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid #CCCCCC;
+    }
+    
+    .footer-row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+        
+    }
+    
+    .footer-row-icon{
+        font-size: xx-large;
+        margin-left: 10px;
+    }
+    
+    // .footer-row-header {
+    //     color: #D70306;
+    //     font-weight: bold;
+    //     font-style: 30px;
+    //     font-size: x-large;
+    // }
+    
+    

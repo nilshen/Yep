@@ -1,20 +1,55 @@
+.searchbar-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-.searchbar-container {
+.searchbar-container-bar {
+    // border: 1px solid #CCCCCC;
+    position: relative;
     display: flex;
     justify-content:center;
     align-items: center;
-
+    // width: 50%;
+    // width:50%;
+    // height: 50px;
+    
+    
     input {
         width: 300px;
-        height: 37px;
-        padding-left: 0px;
+        height: 40px;
+        padding-left: 10px;
         outline: none;
     }
 }
 
+.searchbar-container-result{
+    display: flex;
+    justify-content: start;
+}
+
 
 .searchbar-restaurant {
+    font-size: 18px;
+    color: #666;
+    font-weight: 700;
     size: 50;
+}
+
+.searchbar-location{
+    font-size: 18px;
+    color: #666;
+    font-weight: 700;
+    size: 50;
+}
+
+
+.searchbar-default {
+    font-size: large;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -27,6 +62,7 @@
     padding: 10px 12px;
     cursor: pointer;
     margin-top: -0.5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
 .searchbar-icon:hover {

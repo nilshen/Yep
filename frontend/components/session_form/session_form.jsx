@@ -1,6 +1,7 @@
 import React from 'react';
 import * as Demo from './demo_user_login'
 import { Link } from 'react-router-dom';
+import Header from '../header/header';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -59,10 +60,15 @@ class SessionForm extends React.Component {
     )
 
     return (
-      <div className="login-form-container">
-        <Link to="/">Home Page</Link>
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to Yep!
+      <div className="session-form-container">
+
+     <div>
+      <Header/>
+     </div>
+     <div className='session-body'>
+      <div className='session-form-left'>
+        <form onSubmit={this.handleSubmit} className="session-form-box">
+          <h2 className='session-form-header'>Welcome to Yep!</h2>
           <br/>
           Please {this.props.formType} or {this.props.navLink}
           {this.renderErrors()}
@@ -88,6 +94,11 @@ class SessionForm extends React.Component {
           </div>
           { (this.props.formType === "login") && demoLogin }
         </form>
+        </div>
+        <div className='session-form-right'>
+          <img src="https://yep-seeds.s3.amazonaws.com/images/session-pic.png" width="280" height="250" />
+        </div>
+        </div>
       </div>
     );
   }

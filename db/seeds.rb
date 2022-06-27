@@ -16,13 +16,13 @@ Restaurant.reset_pk_sequence
 
 
 #User Seeds
-demo = User.create!({username: "whatsforsupper", password: "123456"})
+demo = User.create!({username: "Demo", password: "123456"})
 
 #Restaurant Seeds
 r1 = Restaurant.create!(
     name: "Szechuan Mountain House", 
     address: "23 St Marks Pl", 
-    city: " New York", 
+    city: "New York", 
     state: "NY", 
     zip_code: 10003, 
     phone_number: "(917) 388-3866", 
@@ -40,7 +40,7 @@ r1.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaurants
 r2 = Restaurant.create!(
     name: "Cote", 
     address: "16 W 22nd St", 
-    city: " New York", 
+    city: "New York", 
     state: "NY", 
     zip_code: 10010, 
     phone_number: "(212) 401-7986", 
@@ -59,7 +59,7 @@ r2.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaurants
 r3 = Restaurant.create!(
     name: "Patisserie Fouet", 
     address: "15 E 13th St", 
-    city: " New York", 
+    city: "New York", 
     state: "NY", 
     zip_code: 10003, 
     phone_number: "(212) 620-0622", 
@@ -77,7 +77,7 @@ r3.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaurants
 r4 = Restaurant.create!(
     name: "Raines Law Room", 
     address: "48 W 17th St", 
-    city: " New York", 
+    city: "New York", 
     state: "NY", 
     zip_code: 10011, 
     phone_number: "This business has not enabled messaging", 

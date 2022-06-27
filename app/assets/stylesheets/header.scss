@@ -1,0 +1,42 @@
+
+
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    margin-top:0px;
+    margin-bottom: 10px;
+    height: 200px;
+    background-image: url("https://yep-seeds.s3.amazonaws.com/images/headerpics.jpeg");
+}
+
+.header-left > * {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    line-height: 20px;
+    color: rgba(255,255,255,1);
+    text-align: left;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    margin-left: 1rem;
+    z-index: 100;
+}
+
+.header-middle > * {
+
+    z-index: 100;
+}
+
+.logo{
+    width: 180px;
+    height: 160px;
+}
+
+
+.header-right > * {
+    font-size: 14px;
+    margin-right: 1rem;
+    z-index: 100;
+}
