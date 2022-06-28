@@ -28,6 +28,7 @@ class SearchBar extends React.Component {
         // const navTo = useNavigate();
         // navTo('/restaurants')
         this.props.history.push(`${searchInput}`)
+        this.state.input = ""
         // location.reload();
         // const history = useHistory()
         // history.go(0)
@@ -50,7 +51,7 @@ class SearchBar extends React.Component {
                     className="searchbar-default"
                     placeholder="Restaurants..."
                     onChange={this.update('input')}
-                    value={this.state.input}
+                    // value={this.state.input}
                     />
                 </p>
                 <p className="searchbar-location">

@@ -71,47 +71,52 @@ class Homepage extends React.Component {
             <h2 className='cat-header'>Categories</h2>
             <div className='cat-boxes'>
             <div className='cat-boxes-row1'>
+              <Link to="restaurants/search/sushi" style={{ textDecoration: 'none' }}>
             <div className="cat-box">
             
               <img className='cat-box-pic' src="https://yep-seeds.s3.amazonaws.com/images/sushi.png"></img>
-                
-            <h2 className='cat-box-font'>Sushi</h2>
-
+              <h2 className='cat-box-font'>Sushi</h2>
             </div>
-            <div className="cat-box">
-              <Link to="restaurants/?search=steakhouse">
-                    <img className='cat-box-pic' src="https://yep-seeds.s3.amazonaws.com/images/steakhouse.png"></img>
               </Link>
+              <Link to="restaurants/search/steakhouse" style={{ textDecoration: 'none' }}>
+            <div className="cat-box">
+                    <img className='cat-box-pic' src="https://yep-seeds.s3.amazonaws.com/images/steakhouse.png"></img>
           
             <h3 className='cat-box-font'>Steak</h3>
             </div>
+              </Link>
+
+              <Link to="restaurants/search/lounges" style={{ textDecoration: 'none' }}>
             <div className="cat-box">
-            
-              <img className='cat-box-pic' src="https://yep-seeds.s3.amazonaws.com/images/drinks.png"></img>
+                <img className='cat-box-pic' src="https://yep-seeds.s3.amazonaws.com/images/drinks.png"></img>
 
             <h3 className='cat-box-font'>Bars & Lounges</h3>
             </div>
+              </Link>
             </div>
 
             <div className='cat-boxes-row1'>
+              <Link to="restaurants/search/burger" style={{ textDecoration: 'none' }}>
             <div className="cat-box">
-              
-              <img className='cat-box-pic' src="https://yep-seeds.s3.amazonaws.com/images/burger.png"></img>
+                <img className='cat-box-pic' src="https://yep-seeds.s3.amazonaws.com/images/burger.png"></img>
             
             <h3 className='cat-box-font'>Burger</h3>
             </div>
+              </Link>
+              <Link to="restaurants/search/dessert" style={{ textDecoration: 'none' }}>
             <div className="cat-box">
-              
-              <img className='cat-box-pic' src="https://yep-seeds.s3.amazonaws.com/images/Dessert.png"></img>
+                <img className='cat-box-pic' src="https://yep-seeds.s3.amazonaws.com/images/Dessert.png"></img>
               
             <h3 className='cat-box-font'>Dessert</h3>
             </div>
+              </Link>
+              <Link to="restaurants/search/coffee" style={{ textDecoration: 'none' }}>
             <div className="cat-box">
-
                 <img className='cat-box-pic' src="https://yep-seeds.s3.amazonaws.com/images/coffee.png"></img>
       
               <h3 className='cat-box-font'>Coffee</h3>
             </div>
+              </Link>
             </div>
           
         </div>
