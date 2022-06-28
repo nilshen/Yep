@@ -22,7 +22,7 @@ class SearchResult extends React.Component {
 
 
     render() {
-        if (!this.props.restaurants) return null;
+        
         
         
         let restaurants = this.props.restaurants;

@@ -3,7 +3,7 @@ class Api::RestaurantsController < ApplicationController
     def index
         # debugger
         if params[:input]
-            @restaurants = Restaurant.where("category ILIKE ? OR name ILIKE ?", "%#{params[:input]}%", "%#{params[:input]}%")
+            @restaurants = Restaurant.where("name ILIKE ? OR category ILIKE?", "%#{params[:input]}%", "%#{params[:input]}%")
             if @restaurants.length > 0
                 render :index
             else
@@ -12,8 +12,8 @@ class Api::RestaurantsController < ApplicationController
         else
             @restaurants = Restaurant.all
             render :index
-        # debugger
         end
+        # debugger
     end
 
     def show

@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import { FiSearch } from "react-icons/fi"
-import { Link, withRouter } from 'react-router-dom';
+import {Link} from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 class SearchBar extends React.Component {
     constructor(props){
@@ -20,11 +21,16 @@ class SearchBar extends React.Component {
         e.preventDefault();
         let searchInput = this.state.input
         if (searchInput === '') {
-            searchInput = `/businesses`
+            searchInput = `/restaurants`
         } else {
-            searchInput = `/businesses/search/${searchInput}`
+            searchInput = `/restaurants/search/${searchInput}`
         }
+        // const navTo = useNavigate();
+        // navTo('/restaurants')
         this.props.history.push(`${searchInput}`)
+        // location.reload();
+        // const history = useHistory()
+        // history.go(0)
     }
 
     // componentDidMount() {

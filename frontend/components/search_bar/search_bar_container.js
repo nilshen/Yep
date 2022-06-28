@@ -4,7 +4,7 @@ import { withRouter } from "react-router";
 import { requestRestaurants } from "../../actions/restaurant_actions";
 
 
-const mSTP = (state, ownProps) => {
+const mSTP = (state) => {
     return {
         restaurants: Object.values(state.entities.restaurants)
     }
