@@ -43,6 +43,7 @@ class SearchBar extends React.Component {
     render () {
         let {restaurants} = this.props
         return (
+            <div className="searchbar-parent">
             <div className="searchbar-container">
                 <div className="searchbar-container-bar">
                 <p className="searchbar-restaurant">
@@ -76,8 +77,8 @@ class SearchBar extends React.Component {
                             } 
                         }).map((restaurant) => (
                             <Link to={`/restaurants/${restaurant.id}`} className="index-item" style={{ textDecoration: 'none' }} key={restaurant.id}>
-                            <div className='index-item-container'>
-                                <img className='index-pic' src={restaurant.photoUrls[0]} />
+                            <div className='index-item-container-searchbar'>
+                                <img className='index-pic-searchbar' src={restaurant.photoUrls[0]} />
                                 <div className='index-item-individual'>
                                     <h3>{restaurant.name}</h3>
                                     <div className='index-item-individual-details'>
@@ -91,6 +92,7 @@ class SearchBar extends React.Component {
                         ))}
                     </ul>
                 </div>
+            </div>
             </div>
         );
     }

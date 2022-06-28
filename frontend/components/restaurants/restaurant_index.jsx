@@ -28,8 +28,9 @@ class RestaurantIndex extends React.Component {
                 <div>
                     <Header/>
                 </div>
-                
-                <Search_bar_container/>
+                <div>
+                    <Search_bar_container/>
+                </div>
                     <div className="indexlayout-container">
                         <div>filter placeholder</div>
                     
