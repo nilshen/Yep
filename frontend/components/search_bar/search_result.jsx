@@ -3,6 +3,7 @@ import Header from "../header/header";
 import Search_bar_container from "./search_bar_container";
 import { Link } from "react-router-dom";
 import {Footer} from "../footer/footer";
+import RestaurantIndexItem from '../restaurants/restaurant_index_item';
 
 
 class SearchResult extends React.Component {
@@ -41,24 +42,28 @@ class SearchResult extends React.Component {
                 
                     <ul className="indexlayout-item">
                     {restaurants.map((restaurant)=>(
-                    <Link to={`/restaurants/${restaurant.id}`} className="index-item" style={{ textDecoration: 'none' }}>
-                    <div className='index-item-container'>
+                        <RestaurantIndexItem 
+                        restaurant = { restaurant }
+                        key = { restaurant.id }
+                    />
+                    // <Link to={`/restaurants/${restaurant.id}`} className="index-item" style={{ textDecoration: 'none' }}>
+                    // <div className='index-item-container'>
             
-                        <img className='index-pic' src={restaurant.photoUrls[0]} />
+                    //     <img className='index-pic' src={restaurant.photoUrls[0]} />
             
-                        <div className='index-item-individual'>
-                            <h3>{restaurant.name}</h3>
+                    //     <div className='index-item-individual'>
+                    //         <h3>{restaurant.name}</h3>
                     
-                            <div className='index-item-individual-details'>
-                                <div className='index-item-individual-details-cat'>{restaurant.category}</div>
-                                <div>{restaurant.price}</div>
-                            </div>
+                    //         <div className='index-item-individual-details'>
+                    //             <div className='index-item-individual-details-cat'>{restaurant.category}</div>
+                    //             <div>{restaurant.price}</div>
+                    //         </div>
                             
-                            <div className="index-item-individual-hour">Hours: {restaurant.hours}</div>
+                    //         <div className="index-item-individual-hour">Hours: {restaurant.hours}</div>
                         
-                        </div>
-                    </div>
-                    </Link>
+                    //     </div>
+                    // </div>
+                    // </Link>
                         ))}
                     </ul>
                     <div>Google Map placeholder</div>

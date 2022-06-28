@@ -86,7 +86,7 @@ class Homepage extends React.Component {
             </div>
               </Link>
 
-              <Link to="restaurants/search/lounges" style={{ textDecoration: 'none' }}>
+              <Link to="restaurants/search/drinks" style={{ textDecoration: 'none' }}>
             <div className="cat-box">
                 <img className='cat-box-pic' src="https://yep-seeds.s3.amazonaws.com/images/drinks.png"></img>
 
