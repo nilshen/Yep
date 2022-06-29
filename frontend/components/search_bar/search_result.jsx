@@ -26,7 +26,7 @@ class SearchResult extends React.Component {
         
         
         
-        let restaurants = this.props.restaurants;
+        const {restaurants, requestReviews } = this.props;
     
         
 
@@ -38,17 +38,18 @@ class SearchResult extends React.Component {
             
             <Search_bar_container/>
                 <div className="indexlayout-container">
-                    <div>filter placeholder</div>
+                    {/* <div>filter placeholder</div> */}
                 
                     <ul className="indexlayout-item">
                     {restaurants.map((restaurant)=>(
                         <RestaurantIndexItem 
                         restaurant = { restaurant }
+                        requestReviews = {requestReviews}
                         key = { restaurant.id }
                     />
                         ))}
                     </ul>
-                    <div>Google Map placeholder</div>
+                    {/* <div>Google Map placeholder</div> */}
                 
                 </div>
                 <div>

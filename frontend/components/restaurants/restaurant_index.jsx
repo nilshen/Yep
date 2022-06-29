@@ -20,7 +20,7 @@ class RestaurantIndex extends React.Component {
 
     render() { 
         // debugger
-        let { restaurants } = this.props
+        const { restaurants, requestReviews } = this.props
         // debugger
         // console.log(this.state)
         return (
@@ -32,17 +32,18 @@ class RestaurantIndex extends React.Component {
                     <Search_bar_container/>
                 </div>
                     <div className="indexlayout-container">
-                        <div>filter placeholder</div>
+                        {/* <div>filter placeholder</div> */}
                     
                         <ul className="indexlayout-item">
                         {restaurants.map((restaurant)=>(
                             <RestaurantIndexItem 
                                 restaurant = { restaurant }
+                                requestReviews = {requestReviews}
                                 key = { restaurant.id }
                             />
                             ))}
                         </ul>
-                        <div>Google Map placeholder</div>
+                        {/* <div>Google Map placeholder</div> */}
                     
                     </div>
                     <div>

@@ -26,4 +26,8 @@ class Restaurant < ApplicationRecord
     validates :city, :state, :zip_code, :phone_number, :category, presence: true
 
     has_many_attached :photos 
+
+    has_many :reviews, 
+    foreign_key: "restaurant_id",
+    class_name: "Review"
 end

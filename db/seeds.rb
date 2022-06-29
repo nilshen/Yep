@@ -7,12 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
 #users reset including ID
-# User.reset_pk_sequence
 User.destroy_all
+User.reset_pk_sequence
 
 #restaurants reset including ID
-# Restaurant.reset_pk_sequence
 Restaurant.destroy_all
+Restaurant.reset_pk_sequence
 
 
 #User Seeds
@@ -91,3 +91,11 @@ r4 = Restaurant.create!(
 r4.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaurants/rl1.jpeg'), filename:'rl1.jpeg')
 r4.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaurants/rl2.jpeg'), filename:'rl2.jpeg')
 r4.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaurants/rl3.jpeg'), filename:'rl3.jpeg')
+
+
+Review.destroy_all
+Review.reset_pk_sequence
+review1 = Review.create!(rating: 1, body: "Best in town.", user_id: demo.id, restaurant_id: r1.id)
+review2 = Review.create!(rating: 2, body: "Best in town.", user_id: demo.id, restaurant_id: r2.id)
+review3 = Review.create!(rating: 3, body: "Best in town.", user_id: demo.id, restaurant_id: r3.id)
+review4 = Review.create!(rating: 4, body: "Best in town.", user_id: demo.id, restaurant_id: r4.id)

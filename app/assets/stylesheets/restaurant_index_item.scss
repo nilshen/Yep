@@ -10,6 +10,16 @@
 
 }
 
+.index-item-individual-rating{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.reviews-length{
+    margin-left: 5px;
+}
+
 .index-pic {
     object-fit: cover;
     width: 190px;
@@ -34,4 +44,17 @@
 
 .index-item-individual-hour {
     font-size: small;
+}
+
+.review-body {
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    -webkit-letter-spacing: 0px;
+    -moz-letter-spacing: 0px;
+    -ms-letter-spacing: 0px;
+    letter-spacing: 0px;
+    line-height: 20px;
+    color: rgba(110,112,114,1);
+    text-align: left;
 }
