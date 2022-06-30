@@ -8,12 +8,14 @@
 require 'open-uri'
 #users reset including ID
 User.destroy_all
-User.reset_pk_sequence
+# User.reset_pk_sequence
 
-#restaurants reset including ID
+# restaurants reset including ID
 Restaurant.destroy_all
-Restaurant.reset_pk_sequence
+# Restaurant.reset_pk_sequence
 
+Review.destroy_all
+# Review.reset_pk_sequence
 
 #User Seeds
 demo = User.create!({username: "Demo", password: "123456"})
@@ -193,8 +195,7 @@ ko.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaurants
 
 
 
-Review.destroy_all
-Review.reset_pk_sequence
+
 review1 = Review.create!(user_id: demo.id, restaurant_id: pl.id, rating: 4, body: "So good - love it. Delicious. Some of the waiters are arrogant but I don't care - I love the food. Yum Yum Yum Yum. Save room for desert if possible. Even if you have to throw up - so good. I love this place.")
 review2 = Review.create!(user_id: demo.id, restaurant_id: cote.id, rating: 5, body: "I wanna try this Michelin star  bbq for long time. The restaurant is pretty packed and we waited 15-20 mins at the bar for our table. All bbq tables are very close and we sat with another party on the other side.  Since this is our first time here, we want to try the Butcher's Feast as a set dinner.")
 review3 = Review.create!(user_id: demo.id, restaurant_id: pf.id, rating: 5, body: "Pretty good french x japanese dessert place! Pastries are super pretty and each is around $11-$12! These were not too sweet yet very delicious and I loved how fruity the ones we chose were. I thought the matcha one was actually my least favorite and underwhelming but I definitely would recommend getting their tarts or any fruit based pastries!")
