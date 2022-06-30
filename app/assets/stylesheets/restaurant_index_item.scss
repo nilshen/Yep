@@ -1,13 +1,39 @@
+
+
 .index-item-container {
     display: flex;
-    
-    
+    font-family: inherit;
+    font-size: inherit;
+    padding: 20px;
+    border: 1px solid;
+    border-color: #ebebeb;
+    margin: 10px;
 }
+
+.index-item-container:hover{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
 
 .index-item-individual {
     display: flex;
     flex-direction: column;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    -webkit-letter-spacing: 0px;
+    -moz-letter-spacing: 0px;
+    -ms-letter-spacing: 0px;
+    letter-spacing: 0px;
+    line-height: 20px;
+    color: rgba(110,112,114,1);
+    text-align: left;
+    
+}
 
+.index-item-individual:hover {
+  
+    
 }
 
 .index-item-individual-rating{
@@ -17,7 +43,7 @@
 }
 
 .reviews-length{
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .index-pic {
@@ -30,6 +56,7 @@
 }
 
 .index-item-individual-details {
+    // margin-right: 20px;
     display: flex;
     font-size: small;
     // flex-direction: column;
@@ -40,6 +67,20 @@
 .index-item-individual-details-cat {
 
     margin-right: 10px;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    -webkit-letter-spacing: 0px;
+    -moz-letter-spacing: 0px;
+    -ms-letter-spacing: 0px;
+    letter-spacing: 0px;
+    color: rgba(255,255,255,1);
+    text-align: left;
+    font-size: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    font-size: 12px;
+    color: rgba(110,112,114,1);
 }
 
 .index-item-individual-hour {
@@ -54,7 +95,38 @@
     -moz-letter-spacing: 0px;
     -ms-letter-spacing: 0px;
     letter-spacing: 0px;
-    line-height: 20px;
+    // line-height: 20px;
     color: rgba(110,112,114,1);
-    text-align: left;
+    text-align: start;
+    margin-left: 5px;
+}
+
+
+.rating-star-indexItem {
+    // display: none;
+    color: red;
+    // background-color: #ebebeb;
+    // border-radius: 5px;
+    // margin-right: 5px;
+    // background-color: #f52d2d;
+
+}
+
+.index-item-namefont{
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    -webkit-letter-spacing: 0px;
+    -moz-letter-spacing: 0px;
+    -ms-letter-spacing: 0px;
+    letter-spacing: 0px;
+    line-height: 24px;
+    color: rgba(45,46,47,1);
+    text-align: start;
+    margin-top: 2px;
+}
+
+.index-item-comment{
+    display: flex;
+    flex-direction: row;
 }

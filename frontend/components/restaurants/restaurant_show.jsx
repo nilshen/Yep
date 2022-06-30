@@ -4,6 +4,7 @@ import {Footer} from '../footer/footer'
 import Search_bar_container from "../search_bar/search_bar_container";
 import Rater from 'react-rater-plus'
 import ReviewIndexContainer from '../review/review_index_container'
+import { BsStarFill } from "react-icons/bs";
 
 class RestaurantShow extends React.Component {
     
