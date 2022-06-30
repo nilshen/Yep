@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import {Footer} from '../footer/footer'
-import Header from "../header/header";
 import Search_bar_container from "../search_bar/search_bar_container";
 import Rater from 'react-rater-plus'
+import ReviewIndexContainer from '../review/review_index_container'
 
 class RestaurantShow extends React.Component {
     
@@ -11,39 +11,45 @@ class RestaurantShow extends React.Component {
         this.props.requestRestaurant(this.props.match.params.restaurantId)
     }
 
+    // componentDidUpdate(prevProps) {
+    //     if (prevProps.restaurantId !== this.props.restaurantId) {
+    //         this.componentDidMount();
+    //     }
+    // }
 
     render() {
         // debugger
         const { restaurant, currentUser,logout } = this.props
         // debugger
+        // console.log(currentUser)
+        // console.log(currentUser.username)
 
-        const session = currentUser ? (  
-            <div className="login-signup">
-              <h2 className="header-name">Welcome, {currentUser.username}!</h2>
+        let session = currentUser ? (  
+            <div className="header-show">
+              <h2 className="header-name-show">Welcome, {currentUser.username}!</h2>
               <button className="header-button" onClick={logout}>Log Out</button>
             </div>
             ) : (
               <div>
-              <header className='header'>
+              <header className='header-show'>
         
-              <nav className="header-right">
-                    <Link to="/login" style={{ textDecoration: 'none' }} className='login-font'>Log In</Link>
-                    <Link to="/signup" style={{ textDecoration: 'none' }} className='login-font'>Sign Up</Link>
+              <nav className="header-right-show">
+                    <Link to="/login" style={{ textDecoration: 'none' }} className='login-font-show'>Log In</Link>
+                    <Link to="/signup" style={{ textDecoration: 'none' }} className='login-font-show'>Sign Up</Link>
                   </nav>
               </header>
               </div>
             )
                 
             //overallrating for restaurant
-            let rating = 0;
-            let reviews = this.props.restaurant.reviews
-            reviews.map((review)=>(
-                rating += review.rating
-                ))
-            let overallRating = Math.round(rating / reviews.length)
+            // let rating = 0;
+            // let reviews = this.props.restaurant.reviews
+            // reviews.map((review)=>(
+            //     rating += review.rating
+            //     ))
+            // let overallRating = Math.round(rating / reviews.length)
 
         return (
-
             
         <div>
             <div className="show-header">
@@ -55,7 +61,7 @@ class RestaurantShow extends React.Component {
                 <div className="show-header-item">
                     <Search_bar_container/>
                 </div>
-                <div>
+                <div className="show-header-session">
                     {session}
                 </div>
 
@@ -73,8 +79,8 @@ class RestaurantShow extends React.Component {
                         <Link to={`/restaurants/${restaurant.id}/reviews/new`}>Write a Review</Link>        
                     </div>
                     <div>{restaurant.name}</div>
-                    <div><Rater total={5} rating={overallRating}/></div>
-                    <div className='reviews-length'>{restaurant.reviews.length}</div>
+                    {/* <div><Rater total={5} rating={overallRating}/></div> */}
+                    {/* <div className='reviews-length'>{restaurant.reviews.length}</div> */}
                     <div>{restaurant.address}</div>
                     <div>{restaurant.city}</div>
                     <div>{restaurant.state}</div>
@@ -86,9 +92,12 @@ class RestaurantShow extends React.Component {
                     <div>{restaurant.hours}</div>
                 </div>
                     
-                    <div>
-                        {restaurant.reviews[0].body}
+                <div className="biz-show-rec-reviews">
+                    <div className="biz-show-each-review">
+                        <ReviewIndexContainer restaurant={restaurant}/>
                     </div>
+                </div>
+
                 <div>
                     <Footer/>
                 </div>

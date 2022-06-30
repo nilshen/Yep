@@ -2,7 +2,6 @@ import React from "react";
 import RestaurantIndexItem from './restaurant_index_item';
 import Search_bar_container from "../search_bar/search_bar_container";
 import { Link } from 'react-router-dom';
-import Header from "../header/header";
 import {Footer} from '../footer/footer'
 
 class RestaurantIndex extends React.Component {
@@ -19,15 +18,45 @@ class RestaurantIndex extends React.Component {
     }
 
     render() { 
+
+        const { currentUser, logout,restaurants, requestReviews  } = this.props;
         // debugger
-        const { restaurants, requestReviews } = this.props
+        let session = currentUser ? (  
+        <div className="login-signup">
+          <h2 className="header-name">Welcome, {currentUser.username}!</h2>
+          <button className="header-button" onClick={logout}>Log Out</button>
+        </div>
+        ) : (
+          <div>
+          <header className='header'>
+    
+          <nav className="header-right">
+                <Link to="/login" style={{ textDecoration: 'none' }} className='login-font'>Log In</Link>
+                <Link to="/signup" style={{ textDecoration: 'none' }} className='login-font'>Sign Up</Link>
+              </nav>
+          </header>
+          </div>
+        )
+        // debugger
         // debugger
         // console.log(this.state)
         return (
             <div>
-                <div>
-                    <Header/>
+                <div className='header-container'>
+                    <nav className="header-left">
+                        <Link to="/restaurants" style={{ textDecoration: 'none' }}>Restaurants</Link> 
+                        {/* <p>Write a Review</p> */}
+                    </nav>
+                    <nav className="header-middle"> 
+                        <Link to="/">
+                        <img src="https://yep-seeds.s3.amazonaws.com/images/logo.png" className='logo' />
+                        </Link>
+                    </nav>
+                    <nav className="header-right"> 
+                        {session}
+                    </nav>
                 </div>
+                
                 <div>
                     <Search_bar_container/>
                 </div>

@@ -46,6 +46,12 @@ transform: translateX(-50%)
 
 }
 
+.header-show {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+}
+
 
 .login-font {
     padding-left: 30px;
@@ -60,9 +66,29 @@ transform: translateX(-50%)
     font-size: 14px;
 }
 
+.login-font-show {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-left: 20px;
+    top:30px;
+    border-radius: 4px;
+    color: black;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
 .header-name{
     font-size: small;
     color: white;
+}
+
+.header-name-show {
+    font-size: small;
+    color: black;
+
 }
 
 .header-button {
@@ -72,8 +98,10 @@ transform: translateX(-50%)
     padding-top: 5px;
     margin-left: 20px;
     border-radius: 4px;
-    // color: white;
+    color: black;
+    background-color: white;
     font-family: sans-serif;
     font-weight: bold;
     font-size: 14px;
 }
+

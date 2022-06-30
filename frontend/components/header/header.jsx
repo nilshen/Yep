@@ -11,7 +11,7 @@ class Header extends React.Component {
 
     const { currentUser, logout } = this.props;
     // debugger
-    const session = currentUser ? (  
+    let session = currentUser ? (  
     <div className="login-signup">
       <h2 className="header-name">Welcome, {currentUser.username}!</h2>
       <button className="header-button" onClick={logout}>Log Out</button>

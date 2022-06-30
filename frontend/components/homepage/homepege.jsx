@@ -35,12 +35,12 @@ class Homepage extends React.Component {
         </div>
       )
 
-      let rest_cat = [];
-      restaurants.forEach((restaurant)=>{
-        if (!rest_cat.includes(restaurant.category)) {
-            rest_cat.push(restaurant.category)
-        }
-      })
+      // let rest_cat = [];
+      // restaurants.forEach((restaurant)=>{
+      //   if (!rest_cat.includes(restaurant.category)) {
+      //       rest_cat.push(restaurant.category)
+      //   }
+      // })
 
     return (
       <div className='homepage-container'>

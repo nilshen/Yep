@@ -5,7 +5,8 @@ import { requestReviews} from '../../actions/review_actions'
 
 const mSTP = (state) => {
     return {
-        restaurants: Object.values(state.entities.restaurants)
+        restaurants: Object.values(state.entities.restaurants),
+        currentUser: state.entities.users[state.session.id],
     }
 };
 
@@ -13,6 +14,7 @@ const mSTP = (state) => {
 const mDTP = (dispatch) => ({
     requestRestaurants:(input)=>dispatch(requestRestaurants(input)),
     requestReviews: (restaurantId) => dispatch(requestReviews(restaurantId)),
+    logout: ()=> dispatch(logout()),
 });
 
 

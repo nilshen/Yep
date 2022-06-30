@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../header/header";
 import Search_bar_container from "./search_bar_container";
 import { Link } from "react-router-dom";
 import {Footer} from "../footer/footer";
@@ -24,17 +23,42 @@ class SearchResult extends React.Component {
 
     render() {
         
+        const {restaurants, requestReviews, currentUser, logout } = this.props;
         
+        let session = currentUser ? (  
+            <div className="login-signup">
+              <h2 className="header-name">Welcome, {currentUser.username}!</h2>
+              <button className="header-button" onClick={logout}>Log Out</button>
+            </div>
+            ) : (
+              <div>
+              <header className='header'>
         
-        const {restaurants, requestReviews } = this.props;
-    
+              <nav className="header-right">
+                    <Link to="/login" style={{ textDecoration: 'none' }} className='login-font'>Log In</Link>
+                    <Link to="/signup" style={{ textDecoration: 'none' }} className='login-font'>Sign Up</Link>
+                  </nav>
+              </header>
+              </div>
+            )
         
 
         return (
             <div>
-            <div>
-                <Header/>
-            </div>
+                <div className='header-container'>
+                    <nav className="header-left">
+                        <Link to="/restaurants" style={{ textDecoration: 'none' }}>Restaurants</Link> 
+                        {/* <p>Write a Review</p> */}
+                    </nav>
+                    <nav className="header-middle"> 
+                        <Link to="/">
+                        <img src="https://yep-seeds.s3.amazonaws.com/images/logo.png" className='logo' />
+                        </Link>
+                    </nav>
+                    <nav className="header-right"> 
+                        {session}
+                    </nav>
+                </div>
             
             <Search_bar_container/>
                 <div className="indexlayout-container">

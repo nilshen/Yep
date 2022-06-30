@@ -1,9 +1,9 @@
 import { connect } from "react-redux";
 import { createReview } from "../../actions/review_actions";
-import reviewCreate from "./review_create";
 import { requestRestaurant } from "../../actions/restaurant_actions";
 import { logout } from "../../actions/session_actions";
-
+import reviewCreate from "./review_create";
+import { withRouter } from "react-router-dom";
 
 const mSTP = (state, ownProps) => {
     // console.log(ownProps)
@@ -26,4 +26,4 @@ const mDTP = (dispatch) => {
 };
 
 
-export default connect(mSTP, mDTP)(reviewCreate)
+export default withRouter(connect(mSTP, mDTP)(reviewCreate))

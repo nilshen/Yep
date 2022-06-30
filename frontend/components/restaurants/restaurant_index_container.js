@@ -7,11 +7,13 @@ import { requestReviews } from "../../actions/review_actions";
 const mSTP = (state) => ({
     restaurants: Object.values(state.entities.restaurants),
     reviews: Object.values(state.entities.reviews),
+    currentUser: state.entities.users[state.session.id],
 });
 
 const mDTP = (dispatch) => ({
     requestRestaurants: (input) => dispatch(requestRestaurants(input)),
     requestReviews: (restaurantId) => dispatch(requestReviews(restaurantId)),
+    logout: ()=> dispatch(logout()),
 });
 
 export default withRouter(connect(mSTP, mDTP)(RestaurantIndex));
