@@ -2,28 +2,37 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import {Footer} from '../footer/footer'
 import Search_bar_container from "../search_bar/search_bar_container";
-import Rater from 'react-rater-plus'
+import Rater from 'react-rater'
 import ReviewIndexContainer from '../review/review_index_container'
 import { BsStarFill } from "react-icons/bs";
+import { BsFillCheckCircleFill } from "react-icons/bs";
 
 class RestaurantShow extends React.Component {
-    
+    constructor(props) {
+        super(props)
+    }
     componentDidMount() {
         this.props.requestRestaurant(this.props.match.params.restaurantId)
+        // this.props.requestReviews(this.props.match.params.restaurantId)
+        window.scrollTo(0,0)
     }
 
-    // componentDidUpdate(prevProps) {
-    //     if (prevProps.restaurantId !== this.props.restaurantId) {
-    //         this.componentDidMount();
-    //     }
-    // }
+    componentDidUpdate(prevProps) {
+        if (prevProps.restaurantId !== this.props.restaurantId) {
+            this.componentDidMount();
+        }
+    }
 
     render() {
+        
         // debugger
         const { restaurant, currentUser,logout } = this.props
+
+        if (!restaurant) return null;
         // debugger
         // console.log(currentUser)
         // console.log(currentUser.username)
+        console.log(restaurant)
 
         let session = currentUser ? (  
             <div className="header-show">
@@ -42,17 +51,17 @@ class RestaurantShow extends React.Component {
               </div>
             )
                 
-            //overallrating for restaurant
-            // let rating = 0;
-            // let reviews = this.props.restaurant.reviews
-            // reviews.map((review)=>(
-            //     rating += review.rating
-            //     ))
-            // let overallRating = Math.round(rating / reviews.length)
+            // overallrating for restaurant
+            let rating = 0;
+            const reviews = this.props.restaurant.reviews
+            reviews.map((review)=>(
+                rating += review.rating
+                ))
+            let overallRating = Math.round(rating / reviews.length)
 
         return (
             
-        <div>
+        <div className="show-page-container">
             <div className="show-header">
                 <div className="show-header-item" >
                     <Link to="/">
@@ -65,32 +74,46 @@ class RestaurantShow extends React.Component {
                 <div className="show-header-session">
                     {session}
                 </div>
-
             </div>
                 
-                <div>
+                <div className="show-body-pic">
                     <div className="show-pics">
-                        {restaurant.photoUrls.slice(0,3).map((photo, idx) =>(
+                        {restaurant.photoUrls.map((photo, idx) =>(
                             <img key={idx} src={photo} className="show-pic"/>
-                        )
-                        
-                        )} 
+                        ))} 
                     </div>
-                    <div className="show-header-item">
-                        <Link to={`/restaurants/${restaurant.id}/reviews/new`}>Write a Review</Link>        
+                    <div className="show-body-info">
+                        <div className="show-body-info-name">{restaurant.name}</div>
+                    
+                        <div className="show-body-review">
+                            <div className='rating-star-indexItem'><Rater total={5} rating={overallRating} interactive={false}/></div>
+                            <div className='reviews-length'>{restaurant.reviews.length} reviews</div>
+                        </div>
+                            
+                        <div className="show-body-cat">
+                                <div className="show-claimed"><BsFillCheckCircleFill/></div> 
+                                <div className="show-claimed">Claimed</div>
+                                <div className="show-money"> • {restaurant.price} • </div> 
+                                <div className="show-cat">{restaurant.category}</div>
+                        </div>
+                            
+                        <div className="show-hour">{restaurant.hours}</div>
                     </div>
-                    <div>{restaurant.name}</div>
-                    {/* <div><Rater total={5} rating={overallRating}/></div> */}
-                    {/* <div className='reviews-length'>{restaurant.reviews.length}</div> */}
+                </div>
+
+                <div>
+                        <Link to={`/restaurants/${restaurant.id}/reviews/new`} style={{ textDecoration: 'none' }}> 
+                            <button className="show-body-reviewButton"><BsStarFill className="show-header-item-star"/> <p className="show-header-item-text">Write a Review</p></button>
+                        </Link>        
+                </div>
+
+                <div className="show-body-otherinfo">
+                    <div>{restaurant.website}</div>
+                    <div>{restaurant.phone_number}</div>
                     <div>{restaurant.address}</div>
                     <div>{restaurant.city}</div>
                     <div>{restaurant.state}</div>
                     <div>{restaurant.zip_code}</div>
-                    <div>{restaurant.phone_number}</div>
-                    <div>{restaurant.category}</div>
-                    <div>{restaurant.website}</div>
-                    <div>{restaurant.price}</div>
-                    <div>{restaurant.hours}</div>
                 </div>
                     
                 <div className="biz-show-rec-reviews">
@@ -102,8 +125,8 @@ class RestaurantShow extends React.Component {
                 <div>
                     <Footer/>
                 </div>
-               
-        </div>
+              </div> 
+        
         );
     }
 }

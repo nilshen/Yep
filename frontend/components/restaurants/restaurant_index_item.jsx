@@ -49,7 +49,7 @@ class RestaurantIndexItem extends React.Component {
                         <div className='index-item-namefont'>{restaurant.name}</div>
                         <div className='index-item-individual-rating'>
                         <div className='rating-star-indexItem'><Rater total={5} rating={overallRating} interactive={false}/></div>
-                        <div className='reviews-length'>{restaurant.reviews.length}</div>
+                        <div className='reviews-length'>{restaurant.reviews.length} reviews</div>
                         </div>
                         <br />
                         <div className='index-item-individual-details'>

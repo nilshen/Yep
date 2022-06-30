@@ -78,7 +78,7 @@ class Homepage extends React.Component {
               <h2 className='cat-box-font'>Sushi</h2>
             </div>
               </Link>
-              <Link to="restaurants/search/steakhouse" style={{ textDecoration: 'none' }}>
+              <Link to="restaurants/search/steak" style={{ textDecoration: 'none' }}>
             <div className="cat-box">
                     <img className='cat-box-pic' src="https://yep-seeds.s3.amazonaws.com/images/steakhouse.png"></img>
           

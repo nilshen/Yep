@@ -70,6 +70,7 @@ class reviewCreate extends React.Component {
             
         render() { 
             const {restaurant} = this.props
+            if (!restaurant) return null;
         // console.log(this.props)
         // console.log(this.state)
         // console.log(Rater.rating)

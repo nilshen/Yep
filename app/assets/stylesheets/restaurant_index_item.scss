@@ -14,7 +14,7 @@
 
 .index-item-container:hover{
     // box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), -1px -1px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -42,7 +42,8 @@
 }
 
 .reviews-length{
-    margin-left: 10px;
+    margin-left: 5px;
+    padding: 2.5px;
 }
 
 .index-pic {
@@ -90,13 +91,17 @@
 
 .index-item-individual-details-dollar{
     margin-bottom: 0px;
-    padding: 4px;
+    padding: 1px;
 }
 
 .index-item-individual-hour {
     font-size: small;
+    padding: 4px;
 }
 
+.index-item-comment{
+    padding: 4px;
+}
 .review-body {
     font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
     font-size: 12px;
