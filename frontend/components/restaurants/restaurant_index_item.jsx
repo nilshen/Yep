@@ -58,7 +58,9 @@ class RestaurantIndexItem extends React.Component {
 
                         <div className='index-item-comment'>
                         <BsFillChatRightDotsFill/>
-                        <div className='review-body'>{restaurant.reviews[0].body}</div>
+                        <div className='review-body'>
+                            {restaurant.reviews[0].body}
+                        </div>
                         </div>
 
                     </div>
