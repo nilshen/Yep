@@ -246,7 +246,7 @@ $react-rater-active: #ebebeb;; // color of star rated
     margin-top: 2px;
     margin-left: 1px;
     font-size: 12px;
-    padding: 0px 4px 1px 4px;
+    padding: 2px 4px 2px 4px;
     word-spacing: 4px;
   cursor: pointer;
   color: $react-rater-link;
@@ -271,8 +271,23 @@ $react-rater-active: #ebebeb;; // color of star rated
   }
 }
 
+//non interactive (testing)
+// .react-rater-star {
 
+//   // background-color: #ebebeb;
+//   border-radius: 5px;
+//   margin-right: 1px;
+//   margin-top: 2px;
+//   margin-left: 1px;
+//   font-size: 12px;
+//   padding: 0px 4px 1px 4px;
+//   word-spacing: 4px;
+// cursor: pointer;
+// color: $react-rater-link;
+// position: relative;
+// background-color: gold;
 
+// }
 
 
 

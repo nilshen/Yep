@@ -17,6 +17,8 @@ class RestaurantIndexItem extends React.Component {
        
     }
 
+ 
+
         render() { 
             
             // if (!this.props.restaurant.reviews) return null;
@@ -30,7 +32,9 @@ class RestaurantIndexItem extends React.Component {
                 ))
             let overallRating = Math.round(rating / reviews.length)
             
-
+            const starStyle = {
+                backgroundColor: "gold",
+            }
 
 
         return (
@@ -49,8 +53,10 @@ class RestaurantIndexItem extends React.Component {
                         </div>
                         <br />
                         <div className='index-item-individual-details'>
-                            <div className='index-item-individual-details-cat'>{restaurant.category}</div>
-                            <div>{restaurant.price}</div>
+                            <Link to={`restaurants/search/${restaurant.category}`} className='index-item-individual-details-cat-button'>
+                                <button className='index-item-individual-details-cat'>{restaurant.category}</button>
+                            </Link>
+                            <div className='index-item-individual-details-dollar'>{restaurant.price}</div>
                         </div>
                         
                         <div className="index-item-individual-hour">Hours: {restaurant.hours}</div>

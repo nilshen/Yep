@@ -8,22 +8,22 @@
 require 'open-uri'
 #users reset including ID
 User.destroy_all
-# User.reset_pk_sequence
+User.reset_pk_sequence
 
 # restaurants reset including ID
 Restaurant.destroy_all
-# Restaurant.reset_pk_sequence
+Restaurant.reset_pk_sequence
 
 Review.destroy_all
-# Review.reset_pk_sequence
+Review.reset_pk_sequence
 
 #User Seeds
 demo = User.create!({username: "Demo", password: "123456"})
 u1 = User.create!({username: "FoodieNYC", password: "123456"})
 u2 = User.create!({username: "DrunkQueen", password: "123456"})
 u3 = User.create!({username: "SunsetManhattan", password: "123456"})
-u4 = User.create!({username: "ByeByeBrooklyn", password: "123456"})
-u5 = User.create!({username: "NoSleepNY", password: "123456"})
+u4 = User.create!({username: "BuybuyBrooklyn", password: "123456"})
+u5 = User.create!({username: "NoSleepNYC", password: "123456"})
 
 #Restaurant Seeds
 
@@ -196,12 +196,34 @@ ko.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaurants
 
 
 
-review1 = Review.create!(user_id: demo.id, restaurant_id: pl.id, rating: 4, body: "So good - love it. Delicious. Some of the waiters are arrogant but I don't care - I love the food. Yum Yum Yum Yum. Save room for desert if possible. Even if you have to throw up - so good. I love this place.")
-review2 = Review.create!(user_id: demo.id, restaurant_id: cote.id, rating: 5, body: "I wanna try this Michelin star  bbq for long time. The restaurant is pretty packed and we waited 15-20 mins at the bar for our table. All bbq tables are very close and we sat with another party on the other side.  Since this is our first time here, we want to try the Butcher's Feast as a set dinner.")
-review3 = Review.create!(user_id: demo.id, restaurant_id: pf.id, rating: 5, body: "Pretty good french x japanese dessert place! Pastries are super pretty and each is around $11-$12! These were not too sweet yet very delicious and I loved how fruity the ones we chose were. I thought the matcha one was actually my least favorite and underwhelming but I definitely would recommend getting their tarts or any fruit based pastries!")
-review4 = Review.create!(user_id: demo.id, restaurant_id: rl.id, rating: 4, body: "It's been a while since I've gone to a NYC bar that doesn't reek of the past night's hangover mess. I appreciate that this spot is tucked away, so I hope it remains low key on the busy summer nights because I will be returning! The drinks are pretty unique and I thoroughly enjoyed mine. Won't share which one I got so you can be pleasantly surprised by the funny names haha. Not only are the drinks good and flavorful, but the ambience is nicer than that of most bars in the area. And you can actually hear what your friends are saying in the booth.")
-review5 = Review.create!(user_id: demo.id, restaurant_id: mh.id, rating: 4, body: "Authentic Chinese restaurant in east village!")
-review6 = Review.create!(user_id: demo.id, restaurant_id: ss.id, rating: 3, body: "Best burger in town.")
-review7 = Review.create!(user_id: demo.id, restaurant_id: cf.id, rating: 3, body: "I have always been a fan of Chick-fil-a and this location did not disappoint. The team was kind and friendly. They were happy to give me as many sauces as I needed. You have to love their dedication to customer service throughout the years. I highly recommend")
-review8 = Review.create!(user_id: demo.id, restaurant_id: sc.id, rating: 5, body: "Tad bit expensive but lovely coffee. Enjoyed their seasonal special drinks and their breakfast items.")
-review9 = Review.create!(user_id: demo.id, restaurant_id: ko.id, rating: 5, body: "As a huge fan of edo style, I really enjoyed tasting the pure fish flavor rather than extravagant and unnecessary flourishes. The sushi to rice ratio was very reasonable, and each piece had a distinct touch. Started out with an appetizer and some sashimi that tasted super fresh. I would say the toro and uni were my absolute favorites, but the whole omakase menu was very coherent and well put together. Definitely one of the best omakase I've had in the city, as it isn't too boisterous and showy, and remains very solid and sophisticated.")
+review1 = Review.create!(user_id: demo.id, restaurant_id: pl.id, rating: 5, body: "So good - love it. Delicious. Some of the waiters are arrogant but I don't care - I love the food. Yum Yum Yum Yum. Save room for desert if possible. Even if you have to throw up - so good. I love this place.")
+review2 = Review.create!(user_id: u1.id, restaurant_id: pl.id, rating: 3, body: "3. Rushed Experience 2. Ok Steak 3. Overcooked Steak - photo is suppose to be medium/medium rare 4. Horrific Accessibility - you enter from a locked back door with inside tables basically on top of it and you have to stand there and stand there with those tables of people starting at you while you wait for someone to come, unlock the fort, and let you in. 5. Rushed Service - full restaurant and steak came out 10 to 15 minutes after ordering")
+review3 = Review.create!(user_id: u2.id, restaurant_id: pl.id, rating: 2, body: "They only serve one kind of steak. We order steak for four. It was burned on one side and cook well done. Not the medium as ordered. Four people Cost $450.00 had better steak from Texas Road House.")
+
+
+review4 = Review.create!(user_id: demo.id, restaurant_id: cote.id, rating: 5, body: "I wanna try this Michelin star  bbq for long time. The restaurant is pretty packed and we waited 15-20 mins at the bar for our table. All bbq tables are very close and we sat with another party on the other side.  Since this is our first time here, we want to try the Butcher's Feast as a set dinner.")
+review5 = Review.create!(user_id: u3.id, restaurant_id: cote.id, rating: 5, body: "we made our reservations a month in advance for  this special occasion. party of five and the seats were very spacious. servers were super attentive and accommodating! it was very nice experience indeed.")
+review6 = Review.create!(user_id: u4.id, restaurant_id: cote.id, rating: 2, body: "For the price we paid, disappointed in the overall experience.  Cocktails were unimaginative. They forgot one of our entrées. The cut of meats was excellent. For Michelin starred restaurants, this is very disappointing. They should really reconsider their Michelin classification.")
+
+
+review7 = Review.create!(user_id: u5.id, restaurant_id: pf.id, rating: 5, body: "Pretty good french x japanese dessert place! Pastries are super pretty and each is around $11-$12! These were not too sweet yet very delicious and I loved how fruity the ones we chose were. I thought the matcha one was actually my least favorite and underwhelming but I definitely would recommend getting their tarts or any fruit based pastries!")
+review14 = Review.create!(user_id: u3.id, restaurant_id: pf.id, rating: 5, body: "Worth the wait. Delicious lunch. Amazing looking and delicious deserts. Sesame latte?!? Cozy atmosphere. All 5 stars")
+
+
+review8 = Review.create!(user_id: u4.id, restaurant_id: rl.id, rating: 4, body: "It's been a while since I've gone to a NYC bar that doesn't reek of the past night's hangover mess. I appreciate that this spot is tucked away, so I hope it remains low key on the busy summer nights because I will be returning! The drinks are pretty unique and I thoroughly enjoyed mine. Won't share which one I got so you can be pleasantly surprised by the funny names haha. Not only are the drinks good and flavorful, but the ambience is nicer than that of most bars in the area. And you can actually hear what your friends are saying in the booth.")
+review15 = Review.create!(user_id: u2.id, restaurant_id: rl.id, rating: 4, body: "I love love this bar. My absolute favorite to date. Such a nice ambiance - super romantic and dark, not loud either. It's perfect for dates. The couches are really comfortable and good for some canoodling action ;) Dig the drinks too.")
+
+
+review9 = Review.create!(user_id: u2.id, restaurant_id: mh.id, rating: 4, body: "Authentic Chinese restaurant in east village!")
+
+
+review10 = Review.create!(user_id: u3.id, restaurant_id: ss.id, rating: 3, body: "Best burger in town.")
+
+
+review11 = Review.create!(user_id: u1.id, restaurant_id: cf.id, rating: 3, body: "I have always been a fan of Chick-fil-a and this location did not disappoint. The team was kind and friendly. They were happy to give me as many sauces as I needed. You have to love their dedication to customer service throughout the years. I highly recommend")
+
+
+review12 = Review.create!(user_id: u1.id, restaurant_id: sc.id, rating: 5, body: "Tad bit expensive but lovely coffee. Enjoyed their seasonal special drinks and their breakfast items.")
+
+
+review13 = Review.create!(user_id: u5.id, restaurant_id: ko.id, rating: 5, body: "As a huge fan of edo style, I really enjoyed tasting the pure fish flavor rather than extravagant and unnecessary flourishes. The sushi to rice ratio was very reasonable, and each piece had a distinct touch. Started out with an appetizer and some sashimi that tasted super fresh. I would say the toro and uni were my absolute favorites, but the whole omakase menu was very coherent and well put together. Definitely one of the best omakase I've had in the city, as it isn't too boisterous and showy, and remains very solid and sophisticated.")
