@@ -8,14 +8,14 @@
 require 'open-uri'
 #users reset including ID
 User.destroy_all
-User.reset_pk_sequence
+# User.reset_pk_sequence
 
 # restaurants reset including ID
 Restaurant.destroy_all
-Restaurant.reset_pk_sequence
+# Restaurant.reset_pk_sequence
 
 Review.destroy_all
-Review.reset_pk_sequence
+# Review.reset_pk_sequence
 
 #User Seeds
 demo = User.create!({username: "Demo", password: "123456"})
