@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     width: 800px;
-    margin-left: 25%;
+    margin-left: 22%;
     margin-bottom: 20px;
 }
 
@@ -124,4 +124,8 @@
 .hidden-review-link-1:hover, .hidden-review-link-2:hover {
     background-color: #66666630;
     border-radius: 4px;
+}
+
+#hidden-ellipsis {
+    visibility: hidden;
 }

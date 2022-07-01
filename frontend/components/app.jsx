@@ -21,8 +21,8 @@ import reviewEditContainer from './review/review_edit_container';
 const App = () => (
   <div>
     <Switch>
-      <Route path="/restaurants/:restaurantId/reviews/:reviewId/edit" component={reviewEditContainer} />
-      <Route path="/restaurants/:restaurantId/reviews/new" component={reviewCreateContainer} />
+      <ProtectedRoute path="/restaurants/:restaurantId/reviews/:reviewId/edit" component={reviewEditContainer} />
+      <ProtectedRoute path="/restaurants/:restaurantId/reviews/new" component={reviewCreateContainer} />
       <AuthRoute path="/login" component={LogInFormContainer} />
       <AuthRoute path="/signup" component={SignUpFormContainer} />
       <Route path="/restaurants/search/:input" component={searchResultContainer} />

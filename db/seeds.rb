@@ -192,6 +192,23 @@ ko.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaurants
 ko.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaurants/ko3.jpeg'), filename:'ko3.jpeg')
 
 
+harbs = Restaurant.create!(
+    name: "Harbs", 
+    address: "198 9th Ave", 
+    city: "New York", 
+    state: "NY", 
+    zip_code: 10011, 
+    phone_number: "(646) 336-6888", 
+    category:"Dessert", 
+    website:"http://www.harbsnyc.com", 
+    # lat:
+    # lng: 
+    price:"$$", 
+    hours: "11:00 AM - 08:00 PM")
+
+harbs.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaurants/harbs1.jpeg'), filename:'harbs1.jpeg')
+harbs.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaurants/harbs2.jpeg'), filename:'harbs2.jpeg')
+harbs.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaurants/harbs3.jpeg'), filename:'harbs3.jpeg')
 
 
 
@@ -199,11 +216,12 @@ ko.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaurants
 review1 = Review.create!(user_id: demo.id, restaurant_id: pl.id, rating: 5, body: "So good - love it. Delicious. Some of the waiters are arrogant but I don't care - I love the food. Yum Yum Yum Yum. Save room for desert if possible. Even if you have to throw up - so good. I love this place.")
 review2 = Review.create!(user_id: u1.id, restaurant_id: pl.id, rating: 3, body: "3. Rushed Experience 2. Ok Steak 3. Overcooked Steak - photo is suppose to be medium/medium rare 4. Horrific Accessibility - you enter from a locked back door with inside tables basically on top of it and you have to stand there and stand there with those tables of people starting at you while you wait for someone to come, unlock the fort, and let you in. 5. Rushed Service - full restaurant and steak came out 10 to 15 minutes after ordering")
 review3 = Review.create!(user_id: u2.id, restaurant_id: pl.id, rating: 2, body: "They only serve one kind of steak. We order steak for four. It was burned on one side and cook well done. Not the medium as ordered. Four people Cost $450.00 had better steak from Texas Road House.")
-
+review16 = Review.create!(user_id: u5.id, restaurant_id: pl.id, rating: 4, body: "CASH ONLY CANSH ONLY CASH ONLY!!!")
 
 review4 = Review.create!(user_id: demo.id, restaurant_id: cote.id, rating: 5, body: "I wanna try this Michelin star  bbq for long time. The restaurant is pretty packed and we waited 15-20 mins at the bar for our table. All bbq tables are very close and we sat with another party on the other side.  Since this is our first time here, we want to try the Butcher's Feast as a set dinner.")
 review5 = Review.create!(user_id: u3.id, restaurant_id: cote.id, rating: 5, body: "we made our reservations a month in advance for  this special occasion. party of five and the seats were very spacious. servers were super attentive and accommodating! it was very nice experience indeed.")
 review6 = Review.create!(user_id: u4.id, restaurant_id: cote.id, rating: 2, body: "For the price we paid, disappointed in the overall experience.  Cocktails were unimaginative. They forgot one of our entrées. The cut of meats was excellent. For Michelin starred restaurants, this is very disappointing. They should really reconsider their Michelin classification.")
+review17 = Review.create!(user_id: u1.id, restaurant_id: cote.id, rating: 5, body: "Love the butcher's feast but everything is getting more expenseive now!!")
 
 
 review7 = Review.create!(user_id: u5.id, restaurant_id: pf.id, rating: 5, body: "Pretty good french x japanese dessert place! Pastries are super pretty and each is around $11-$12! These were not too sweet yet very delicious and I loved how fruity the ones we chose were. I thought the matcha one was actually my least favorite and underwhelming but I definitely would recommend getting their tarts or any fruit based pastries!")
@@ -227,3 +245,5 @@ review12 = Review.create!(user_id: u1.id, restaurant_id: sc.id, rating: 5, body:
 
 
 review13 = Review.create!(user_id: u5.id, restaurant_id: ko.id, rating: 5, body: "As a huge fan of edo style, I really enjoyed tasting the pure fish flavor rather than extravagant and unnecessary flourishes. The sushi to rice ratio was very reasonable, and each piece had a distinct touch. Started out with an appetizer and some sashimi that tasted super fresh. I would say the toro and uni were my absolute favorites, but the whole omakase menu was very coherent and well put together. Definitely one of the best omakase I've had in the city, as it isn't too boisterous and showy, and remains very solid and sophisticated.")
+
+review17 = Review.create!(user_id: u2.id, restaurant_id: harbs.id, rating: 4, body: "Famous cake place from Japan! I tried this a couple years ago when I visited Japan. I forgot about it until my friend took me here in NYC. The cake is quite delicious but I don't understand the hype. It is quite overpriced for a slice of cake. I like how the cake slices are not overly sweet as usual with Asian desserts.")

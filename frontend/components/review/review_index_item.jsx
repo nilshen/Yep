@@ -99,7 +99,7 @@ class ReviewIndexItem extends React.Component {
                         
 
                     <div className="review-item-rating">
-                        <p><Rater rating={review.rating}/></p>
+                        <p><Rater rating={review.rating} interactive={false}/></p>
                         
                     </div>
 
