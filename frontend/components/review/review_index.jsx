@@ -31,8 +31,8 @@ class ReviewIndex extends React.Component {
 
         return (
             <div>
-                <h3 className="review-index-rec-reviews">Recommended Reviews</h3>
-                <div className="review-index-wrapper">
+                <h3 className="review-item-container">Recommended Reviews</h3>
+                <div>
                     {reviews.map(review => (
                         <ReviewIndexItem review={review} key={review.id} updateReview={updateReview} deleteReview={deleteReview} currentUser={checkCurrentUser} restaurant={restaurant} requestReview={requestReview} />
                     ))}

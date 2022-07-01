@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { BsStarFill } from "react-icons/bs";
-
+import { Footer } from '../footer/footer';
 
 class ReviewEdit extends React.Component{
     constructor(props) {
@@ -92,27 +92,23 @@ class ReviewEdit extends React.Component{
 
         
         return(
-            <div>
+            <div className="review-form-container">
 
-                <header className="edit-form-header">
-                    <Link to="/" className="edit-form-title-logo-wrapper">
-                        <h1 className="edit-form-title">Yep</h1>
-                        
+                
+                <div className="review-form-container-header">
+                    <Link to="/">
                         <img src="https://yep-seeds.s3.amazonaws.com/images/logo.png" className='logo' />
-            
                     </Link>
-
                     <div className="edit-form-user-container">
-                        <h2 className="edit-form-welcome-user">Welcome, {currentUser.username}!</h2>
-                        <button onClick={this.handleLogout} className="edit-form-logout-button">Log Out</button>
+                        <h2 className="header-name-show">Welcome, {currentUser.username}!</h2>
+                        <button onClick={this.handleLogout} className="header-button">Log Out</button>
                     </div>
-                </header>
+                </div>
 
-                <div className="edit-review-form-container">
 
-                    <h1 className="edit-review-form-title">{restaurant.name}</h1>
-
-                    <form className="edit-review-form" onSubmit={this.handleSubmit}>
+                    <div className="review-form-name">{restaurant.name}</div>
+                    <div className="review-form-container-body">
+                    <form className="review-form-container-body-form" onSubmit={this.handleSubmit}>
                         <div className="edit-review-form-rating-wrapper">
 
                             <div className="edit-form-stars-container">
@@ -135,12 +131,15 @@ class ReviewEdit extends React.Component{
                             <p className="select-your-rating">{this.checkedText()}</p>
                         </div>
 
-                        <textarea rows="25" cols="70" className="edit-review-form-textarea" onChange={this.update('body')} defaultValue={`${this.state.body}`} required />
-                        <br />
-                        <button type="submit" className="edit-review-form-submit">Edit Review</button>
+                        <textarea className="create-review-form-textarea" onChange={this.update('body')} defaultValue={`${this.state.body}`} required />
+                    
                     </form>
-
+                        <button type="submit" className="review-form-button">Edit Review</button>
+                    </div>
+                <div className="review-create-container-footer">
+                    <Footer />
                 </div>
+                
             </div>
         )
     }

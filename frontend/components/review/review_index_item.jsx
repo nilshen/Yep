@@ -1,7 +1,8 @@
 import React from "react";
-import { BiUserCircle } from 'react-icons/bi';
+import { BsPersonSquare } from 'react-icons/bs';
 import { Link } from "react-router-dom";
-import { FaEllipsisH } from "react-icons/fa"
+import { FiEdit } from "react-icons/fi"
+import Rater from 'react-rater'
 
 class ReviewIndexItem extends React.Component {
     constructor(props) {
@@ -27,7 +28,6 @@ class ReviewIndexItem extends React.Component {
     }
 
     hideEllipsis(e) {
-        // e.preventDefault();
         if (e.target.contains(e.relatedTarget)) return null;
         this.setState({ display: false})
     }
@@ -38,40 +38,29 @@ class ReviewIndexItem extends React.Component {
         }
     }
 
-    reviewCreateDate() {
-        let date = this.props.review.created_at;
-        let newDate = date.split("-");
-        let month = newDate[1];
-        let day = newDate[2].slice(0, 2);
-        let year = newDate[0];
-        const reviewDate = `${month}/${day}/${year}`
-        return reviewDate;
-    }
+    
 
-    checkStarRating() {
-        switch (this.props.review.rating) {
-            case 5:
-                return "review-item-rating-5"
-            case 4:
-                return "review-item-rating-4"
-            case 3:
-                return "review-item-rating-3"
-            case 2:
-                return "review-item-rating-2"
-            case 1:
-                return "review-item-rating-1"
-            default:
-                break;
-        }
-    }
 
     render() {
         // console.log(this.props);
+        // console.log(this.props.reivew)
+
         if (!this.props.review) return null;
         if (!this.props.currentUser) return null;
         
         const { review, currentUser, updateReview, deleteReview, restaurant } = this.props;
 
+        // let date = review.created_at;
+        // let newDate = date.split("-");
+        // let month = newDate[1];
+        // let day = newDate[2].slice(0, 2);
+        // let year = newDate[0];
+        // const reviewTime = `${month}/${day}/${year}`
+        // return reviewTime;
+        // let day = time.getDate();
+        // let year = time.getYear();
+        // let month = time.getMonth();
+        // let reviewTime =  `${month}/${day}/${year}`
 
         let editReviewButton;
         let deleteReviewButton;
@@ -89,17 +78,14 @@ class ReviewIndexItem extends React.Component {
 
             <div>
                 <div className="review-item-container">
-                    <div className="review-item-profile-container">
-                        <p className="review-item-user-icon"><BiUserCircle /></p>
-
-                        <div className="review-item-name-container">
-                            <p className="review-item-users-name">{review.username}</p>
-                            <p className="review-item-users-location">{restaurant.city}, {restaurant.state}</p>
+                    <div className="review-item-header">
+                        <div className="review-item-profile-container">
+                            <div className="review-item-user-icon"><BsPersonSquare /></div>
+                            <div className="review-item-users-name">{review.username}</div>
                         </div>
-                    </div>
-                    
-                    <div id={this.checkCurrentUser()} className="review-ellipsis-container">
-                        <FaEllipsisH onClick={this.handleEllipsis} className="review-ellipsis" />
+                        
+                        <div id={this.checkCurrentUser()} className="review-ellipsis-container">
+                        <FiEdit onClick={this.handleEllipsis} className="review-ellipsis" />
                             { this.state.display ? (
                             <div className="review-links-container">
                                     {editReviewButton}
@@ -109,17 +95,17 @@ class ReviewIndexItem extends React.Component {
                             null
                         }
                     </div>
+                </div>
                         
 
-                    <div className="review-item-rating-container">
-                        <p id="review-index-item-star-rating" className={this.checkStarRating()}></p>
-        
+                    <div className="review-item-rating">
+                        <p><Rater rating={review.rating}/></p>
+                        
                     </div>
 
                     <div className="review-item-body-container">
                         <p className="review-item-body">{review.body}</p>
                     </div>
-
 
                 </div>
             </div>

@@ -6,6 +6,9 @@ import Rater from 'react-rater'
 import ReviewIndexContainer from '../review/review_index_container'
 import { BsStarFill } from "react-icons/bs";
 import { BsFillCheckCircleFill } from "react-icons/bs";
+import { BsLink45Deg } from "react-icons/bs";
+import { BsTelephoneForward } from "react-icons/bs";
+import { BsFillPinMapFill } from "react-icons/bs";
 
 class RestaurantShow extends React.Component {
     constructor(props) {
@@ -101,23 +104,22 @@ class RestaurantShow extends React.Component {
                     </div>
                 </div>
 
-                <div>
+                <div className="show-body">
                         <Link to={`/restaurants/${restaurant.id}/reviews/new`} style={{ textDecoration: 'none' }}> 
                             <button className="show-body-reviewButton"><BsStarFill className="show-header-item-star"/> <p className="show-header-item-text">Write a Review</p></button>
-                        </Link>        
+                        </Link>  
+                        
+                        <div className="show-body-otherinfo">
+                            <a className="show-body-website" href={restaurant.website} target="_blank">{restaurant.website}<BsLink45Deg/></a>  
+                            <div className="show-body-phone">{restaurant.phone_number}<BsTelephoneForward/></div>
+                            <div className="show-body-address">{restaurant.address}</div>
+                            <div className="show-body-address">{restaurant.city}, {restaurant.state}, {restaurant.zip_code}<BsFillPinMapFill/></div>
+                        </div>
                 </div>
 
-                <div className="show-body-otherinfo">
-                    <div>{restaurant.website}</div>
-                    <div>{restaurant.phone_number}</div>
-                    <div>{restaurant.address}</div>
-                    <div>{restaurant.city}</div>
-                    <div>{restaurant.state}</div>
-                    <div>{restaurant.zip_code}</div>
-                </div>
                     
-                <div className="biz-show-rec-reviews">
-                    <div className="biz-show-each-review">
+                <div className="show-reviews">
+                    <div className="show-each-review">
                         <ReviewIndexContainer restaurant={restaurant}/>
                     </div>
                 </div>
@@ -125,7 +127,7 @@ class RestaurantShow extends React.Component {
                 <div>
                     <Footer/>
                 </div>
-              </div> 
+            </div> 
         
         );
     }
