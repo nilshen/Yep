@@ -82,7 +82,8 @@ class ReviewEdit extends React.Component{
 
 
     render() {
-        // console.log(this.props);
+        console.log(this.props);
+        
         if (!this.props.review) return null;
         if (!this.props.restaurant) return null;
         
@@ -108,10 +109,11 @@ class ReviewEdit extends React.Component{
 
                     <div className="review-form-name">{restaurant.name}</div>
                     <div className="review-form-container-body">
-                    <form className="review-form-container-body-form" onSubmit={this.handleSubmit}>
-                        <div className="edit-review-form-rating-wrapper">
+                    <form  onSubmit={this.handleSubmit}>
+                        <div className="review-form-container-body-form">
+                        <div className="create-form-stars">
 
-                            <div className="edit-form-stars-container">
+                            <div className="create-form-stars-container">
                                 <input id="rating-1" type="radio" value="5" onChange={this.update('rating')} name="rating" checked={this.state.rating === 5 ? true : false}/>
                                 <label htmlFor="rating-1" id="edit-review-form-rating"><BsStarFill className="review-star"/></label>
 
@@ -127,14 +129,14 @@ class ReviewEdit extends React.Component{
                                 <input id="rating-5" type="radio" value="1" onChange={this.update('rating')} name="rating" checked={this.state.rating === 1 ? true : false}/>
                                 <label htmlFor="rating-5" id="edit-review-form-rating"><BsStarFill className="review-star" /></label>
                             </div>
-
-                            <p className="select-your-rating">{this.checkedText()}</p>
+                            <div className="select-your-rating">{this.checkedText()}</div>
                         </div>
 
                         <textarea className="create-review-form-textarea" onChange={this.update('body')} defaultValue={`${this.state.body}`} required />
                     
-                    </form>
+                        </div>
                         <button type="submit" className="review-form-button">Edit Review</button>
+                    </form>
                     </div>
                 <div className="review-create-container-footer">
                     <Footer />

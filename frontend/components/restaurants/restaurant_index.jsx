@@ -19,7 +19,7 @@ class RestaurantIndex extends React.Component {
 
     render() { 
 
-        const { currentUser, logout,restaurants, requestReviews  } = this.props;
+        const { currentUser, logout, restaurants, requestReviews  } = this.props;
         // debugger
         let session = currentUser ? (  
         <div className="login-signup">

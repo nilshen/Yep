@@ -6,7 +6,6 @@ import React from "react";
 
 import { Link } from 'react-router-dom';
 import { Footer } from '../footer/footer';
-
 import { BsStarFill } from "react-icons/bs";
 
 class reviewCreate extends React.Component {
@@ -69,14 +68,15 @@ class reviewCreate extends React.Component {
     }
 
     render() {
-        const { restaurant } = this.props;
+        const { restaurant, currentUser } = this.props;
         if (!restaurant) return null;
         // console.log(this.props)
-        // console.log(this.state)
+        console.log(this.state)
         // console.log(Rater.rating)
-
+        console.log(currentUser)
         // console.log(e.currentTarget.value)
         // console.log(restaurant.name)
+        // console.log(review)
         // debugger
 
         return (
@@ -85,12 +85,16 @@ class reviewCreate extends React.Component {
                     <Link to="/">
                         <img src="https://yep-seeds.s3.amazonaws.com/images/logo.png" className='logo' />
                     </Link>
+
+                    <div className="create-form-user-container">
+                    <h2 className="create-form-welcome-user">Welcome, {currentUser.username}!</h2>
+                    </div>
                 </div>
 
                 <div className="review-form-name">{restaurant.name}</div>
                 <div className="review-form-container-body">
-                    <form className="review-form-container-body-form" onSubmit={this.handleSubmit}>
-
+                    <form  onSubmit={this.handleSubmit}>
+                    <div className="review-form-container-body-form">
                         <div className="create-form-stars">
                             <div className="create-form-stars-container">
                                 <input id="rating-1" type="radio" value="5" onChange={this.update('rating')} name="rating" />
@@ -112,8 +116,9 @@ class reviewCreate extends React.Component {
                         </div>
                         
                         <textarea className="create-review-form-textarea" onChange={this.update('body')} placeholder="Love this speakeasy for drinks and light bites. Be prepared to wait for a bit (you can get a drink at the upstairs bar) but its so worth it. The atmosphere is amazing and the decor is very cool with lots of plants. We all got the illusion, which is delicious and gorgeous (it changes color and they use light leaks in the table to make it glow)." required></textarea>
-                    </form>
+                    </div>
                         <button className="review-form-button">Post Review</button>
+                    </form>
                 </div>
 
                 <div className="review-create-container-footer">
