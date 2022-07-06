@@ -13,7 +13,7 @@ class ReviewIndexItem extends React.Component {
 
         this.handleDelete = this.handleDelete.bind(this);
         this.handleEllipsis = this.handleEllipsis.bind(this);
-        this.hideEllipsis = this.hideEllipsis.bind(this);
+        // this.hideEllipsis = this.hideEllipsis.bind(this);
     }
 
 
@@ -27,10 +27,10 @@ class ReviewIndexItem extends React.Component {
         this.setState({ display: !this.state.display })
     }
 
-    hideEllipsis(e) {
-        if (e.target.contains(e.relatedTarget)) return null;
-        this.setState({ display: false})
-    }
+    // hideEllipsis(e) {
+    //     if (e.target.contains(e.relatedTarget)) return null;
+    //     this.setState({ display: false})
+    // }
 
     checkCurrentUser() {
         if (!this.props.currentUser || this.props.currentUser.id !== this.props.review.user_id) {
