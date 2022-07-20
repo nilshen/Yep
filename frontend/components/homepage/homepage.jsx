@@ -72,7 +72,7 @@ class Homepage extends React.Component {
         </div>
 
         <div className='home-container'>
-            <h2 className='home-header'>Hot and New Businesses</h2>
+            <h2 className='home-header'>Recommended Businesses</h2>
             <ul className="homelayout-item">
                         {randomRestaurants.map((restaurant)=>(
                             <HomepageIndexItem 
