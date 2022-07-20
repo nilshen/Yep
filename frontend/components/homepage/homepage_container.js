@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { requestRestaurants } from '../../actions/restaurant_actions';
 import { logout } from '../../actions/session_actions';
-import Homepage from './homepege';
+import Homepage from './homepage';
 
 const mapStateToProps = (state) => {
   return {
