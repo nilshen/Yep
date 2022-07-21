@@ -104,3 +104,20 @@ transform: translateX(-50%)
     background-color: white;
     
 }
+
+
+.pre-search-users-container {
+    display:flex;
+    justify-content: center;
+    position: fixed;
+    min-height: 720px;
+    width: 320px;
+    overflow-y: scroll;
+    background: var(--light-blue);
+    margin-left: 10px;
+    padding-right: 20px;
+    border-radius: 10px;
+}
+.pre-search-users-container-hidden {
+    display: hidden;
+}

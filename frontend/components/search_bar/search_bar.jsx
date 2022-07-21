@@ -65,6 +65,7 @@ class SearchBar extends React.Component {
                     <FiSearch onClick={this.handleSearch} className="searchbar-icon"/>
                 </div>
                 
+                <div className={this.state.input !== "" ? "pre-search-users-container" : "pre-search-users-container-hidden"}>
                 <div className="searchbar-container-result">
                     <ul>
                         {restaurants.filter((restaurant)=>{
@@ -91,6 +92,7 @@ class SearchBar extends React.Component {
                             </Link>
                         ))}
                     </ul>
+                </div>
                 </div>
             </div>
             </div>

@@ -49,11 +49,11 @@ class MarkerManager {
                                 '<div id="map-info-window-name">' +
                                     restaurant.name +
                                 '</div>' +
+                                '<div id="map-info-window-category">' +
+                                    restaurant.category + " " + restaurant.price +
+                                '</div>' +
                                 '<div id="map-info-window-hours">' +
                                     restaurant.hours +
-                                '</div>' +
-                                '<div id="map-info-window-category">' +
-                                    restaurant.category +
                                 '</div>' +
                             '</div>' +
                         '</div>'

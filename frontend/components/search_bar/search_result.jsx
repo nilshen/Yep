@@ -65,11 +65,12 @@ class SearchResult extends React.Component {
                     {/* <div>filter placeholder</div> */}
                 
                     <ul className="indexlayout-item">
-                    {restaurants.map((restaurant)=>(
+                    {restaurants.map((restaurant, idx)=>(
                         <RestaurantIndexItem 
                         restaurant = { restaurant }
                         requestReviews = {requestReviews}
                         key = { restaurant.id }
+                        idx = {idx + 1 }
                     />
                         ))}
                     </ul>
