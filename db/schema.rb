@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_28_194511) do
+ActiveRecord::Schema.define(version: 2022_07_21_011908) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,8 @@ ActiveRecord::Schema.define(version: 2022_06_28_194511) do
     t.string "website"
     t.string "price"
     t.string "hours"
+    t.decimal "lat"
+    t.decimal "lng"
     t.index ["category"], name: "index_restaurants_on_category"
     t.index ["name"], name: "index_restaurants_on_name", unique: true
   end

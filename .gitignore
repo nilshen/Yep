@@ -1,3 +1,5 @@
 node_modules
 bundle.js*
 /public/assets
+# Ignore application configuration
+/config/application.yml

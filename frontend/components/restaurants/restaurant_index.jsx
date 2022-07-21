@@ -3,6 +3,7 @@ import RestaurantIndexItem from './restaurant_index_item';
 import Search_bar_container from "../search_bar/search_bar_container";
 import { Link } from 'react-router-dom';
 import {Footer} from '../footer/footer'
+import RestaurantMap from "../map/restaurant_map";
 
 class RestaurantIndex extends React.Component {
     constructor(props){
@@ -60,21 +61,26 @@ class RestaurantIndex extends React.Component {
                 <div>
                     <Search_bar_container/>
                 </div>
-                    <div className="indexlayout-container">
-                        {/* <div>filter placeholder</div> */}
-                    
-                        <ul className="indexlayout-item">
-                        {restaurants.map((restaurant)=>(
-                            <RestaurantIndexItem 
-                                restaurant = { restaurant }
-                                requestReviews = {requestReviews}
-                                key = { restaurant.id }
-                            />
-                            ))}
-                        </ul>
-                        {/* <div>Google Map placeholder</div> */}
-                    
+                
+                <div className="indexlayout-container">
+                    {/* <div>filter placeholder</div> */}
+                
+                    <ul className="indexlayout-item">
+                    {restaurants.map((restaurant, idx)=>(
+                        <RestaurantIndexItem 
+                            restaurant = { restaurant }
+                            requestReviews = {requestReviews}
+                            key = { restaurant.id }
+                            idx = {idx + 1}
+                        />
+                        ))}
+                    </ul>
+                    <div className="biz-index-map-container">
+                        <RestaurantMap restaurants={restaurants} />
                     </div>
+                
+                </div>
+
                     <div>
                         <Footer/>
                     </div>

@@ -1,9 +1,9 @@
 .indexlayout-container{
     margin-top: 100px;
     display: flex;
-    // flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    margin-left: -40px;
+    
 }
 
 // .indexlayout-container-2 {
@@ -11,4 +11,21 @@
 //     flex-direction: row;
 //     justify-content: space-between;
 // }
+
+// GOOGLE MAP
+
+.biz-index-map-container {
+    margin-top: 25px;
+    min-width: 310px;
+    width: 500px;
+    height: 110vh;
+    // margin-bottom: 18px;
+}
+
+#map-container {
+    min-width: 310px;
+    width: 500px;
+    height: 110vh;
+    margin-left: 30px;
+}
 

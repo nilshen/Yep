@@ -7,6 +7,8 @@
 #  category     :string
 #  city         :string
 #  hours        :string
+#  lat          :decimal(, )
+#  lng          :decimal(, )
 #  name         :string           not null
 #  phone_number :string
 #  price        :string
@@ -23,7 +25,7 @@
 #
 class Restaurant < ApplicationRecord
     validates :name, :address, presence: true, uniqueness: true
-    validates :city, :state, :zip_code, :phone_number, :category, presence: true
+    validates :city, :state, :zip_code, :phone_number, :category, :lat, :lng, presence: true
 
     has_many_attached :photos 
 
