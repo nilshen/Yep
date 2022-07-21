@@ -8,14 +8,14 @@
 require 'open-uri'
 #users reset including ID
 User.destroy_all
-# User.reset_pk_sequence
+User.reset_pk_sequence
 
 # restaurants reset including ID
 Restaurant.destroy_all
-# Restaurant.reset_pk_sequence
+Restaurant.reset_pk_sequence
 
 Review.destroy_all
-# Review.reset_pk_sequence
+Review.reset_pk_sequence
 
 #User Seeds
 demo = User.create!({username: "Demo", password: "123456"})
@@ -36,8 +36,8 @@ cote = Restaurant.create!(
     phone_number: "(212) 401-7986", 
     category:"Steakhouses", 
     website:"https://www.cotenyc.com", 
-    # lat:
-    # lng: 
+    lat: 40.741280,
+    lng: -73.991270,
     price:"$$$$", 
     hours: "05:00 PM - 11:00 PM")
 
@@ -54,8 +54,8 @@ pl = Restaurant.create!(
     phone_number: "(718) 387-7400", 
     category:"Steak", 
     website:"http://www.peterluger.com", 
-    # lat:
-    # lng: 
+    lat:40.709750,
+    lng:-73.962590,
     price:"$$$$", 
     hours: "11:45 AM - 09:45 PM")
 
@@ -72,8 +72,8 @@ pf = Restaurant.create!(
     phone_number: "(212) 620-0622", 
     category:"Desserts", 
     website:"https://www.fouetnyc.com", 
-    # lat:
-    # lng: 
+    lat:40.735040,
+    lng:-73.993060,
     price:"$$", 
     hours: "10:00 AM - 08:00 PM")
 
@@ -90,8 +90,8 @@ rl = Restaurant.create!(
     phone_number: "This business has not enabled messaging", 
     category:"Drinks", 
     website:"https://www.raineslawroom.com", 
-    # lat:
-    # lng: 
+    lat:40.738690,
+    lng:-73.994590,
     price:"$$$", 
     hours: "05:00 PM - 02:00 AM")
 
@@ -108,8 +108,8 @@ mh = Restaurant.create!(
     phone_number: "(917) 388-3866", 
     category:"Szechuan", 
     website:"https://www.szechuanmountainhouse.com", 
-    # lat:
-    # lng: 
+    lat:40.7291138,
+    lng: -73.9885764,
     price:"$$", 
     hours: "11:30 AM - 10:30 PM")
 
@@ -127,8 +127,8 @@ ss = Restaurant.create!(
     phone_number: "(212) 889-6600", 
     category:"Burger", 
     website:"https://shakeshack.com/home#/", 
-    # lat:
-    # lng: 
+    lat:40.7421625,
+    lng: -73.9880134217897,	
     price:"$$", 
     hours: "11:00 AM - 11:00 PM")
 
@@ -145,8 +145,8 @@ cf = Restaurant.create!(
     phone_number: "(855) 667-3232", 
     category:"Burger", 
     website:"https://www.chick-fil-a.com", 
-    # lat:
-    # lng: 
+    lat:40.7424156,
+    lng:-73.9928801,
     price:"$$", 
     hours: "06:30 AM - 10:00 PM")
 
@@ -164,8 +164,8 @@ sc = Restaurant.create!(
     phone_number: "(855) 711-3385", 
     category:"Coffee", 
     website:"https://www.stumptowncoffee.com/", 
-    # lat:
-    # lng: 
+    lat:40.74575025,
+    lng:-73.98813675,
     price:"$$", 
     hours: "07:00 AM - 03:00 PM")
 
@@ -182,8 +182,8 @@ ko = Restaurant.create!(
     phone_number: "(212) 727-1709", 
     category:"Sushi", 
     website:"http://www.kosakanyc.com", 
-    # lat:
-    # lng: 
+    lat: 40.73819295,
+    lng: -74.0014857531986,
     price:"$$$$", 
     hours: "05:00 PM - 11:00 PM")
 
@@ -201,8 +201,8 @@ harbs = Restaurant.create!(
     phone_number: "(646) 336-6888", 
     category:"Dessert", 
     website:"http://www.harbsnyc.com", 
-    # lat:
-    # lng: 
+    lat:40.7458333,
+    lng:-74.0015223,
     price:"$$", 
     hours: "11:00 AM - 08:00 PM")
 

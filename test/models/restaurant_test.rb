@@ -7,6 +7,8 @@
 #  category     :string
 #  city         :string
 #  hours        :string
+#  lat          :decimal(, )
+#  lng          :decimal(, )
 #  name         :string           not null
 #  phone_number :string
 #  price        :string

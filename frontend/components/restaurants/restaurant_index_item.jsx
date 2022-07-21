@@ -22,7 +22,7 @@ class RestaurantIndexItem extends React.Component {
         render() { 
             
             // if (!this.props.restaurant.reviews) return null;
-            const {restaurant} = this.props;
+            const {restaurant, idx} = this.props;
             // debugger
 
             let rating = 0;
@@ -46,7 +46,7 @@ class RestaurantIndexItem extends React.Component {
                     <img className='index-pic' src={restaurant.photoUrls[0]} />
         
                     <div className='index-item-individual'>
-                        <div className='index-item-namefont'>{restaurant.name}</div>
+                        <div className='index-item-namefont'> {idx}. {restaurant.name}</div>
                         <div className='index-item-individual-rating'>
                         <div className='rating-star-indexItem'><Rater total={5} rating={overallRating} interactive={false}/></div>
                         <div className='reviews-length'>{restaurant.reviews.length} reviews</div>
