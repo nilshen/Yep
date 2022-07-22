@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_RESTAURANTS, RECEIVE_RESTAURANT } from "../actions/restaurant_actions";
+import { RECEIVE_ALL_RESTAURANTS, RECEIVE_RESTAURANT, RECEIVE_RESTAURANTS_SEARCH } from "../actions/restaurant_actions";
 
 const restaurantsReducer = (state={all:{}, search: {}}, action) => {
 
@@ -8,10 +8,13 @@ const restaurantsReducer = (state={all:{}, search: {}}, action) => {
 
     switch (action.type) {
         case RECEIVE_ALL_RESTAURANTS:
-            nextState = action.restaurants;
+            nextState.all = action.restaurants;
             return nextState;
         case RECEIVE_RESTAURANT:
             nextState[action.restaurant.id] = action.restaurant;
+            return nextState;
+        case RECEIVE_RESTAURANTS_SEARCH:
+            nextState.search = action.restaurants
             return nextState;
             // return Object.assign({}, state, { [action.restaurant.id]: action.restaurant });
         default:

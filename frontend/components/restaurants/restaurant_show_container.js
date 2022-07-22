@@ -5,7 +5,7 @@ import RestaurantShow from "./restaurant_show";
 
 
 const mSTP = (state, ownProps) => ({
-    restaurant: state.entities.restaurants[ownProps.match.params.restaurantId],
+    restaurant: state.entities.restaurants.all[ownProps.match.params.restaurantId],
     reviews: Object.values(state.entities.reviews),
     currentUser: state.entities.users[state.session.id],
     restaurantId: ownProps.match.params.restaurantId,
@@ -13,7 +13,7 @@ const mSTP = (state, ownProps) => ({
 
 const mDTP = (dispatch) =>({
     requestRestaurant: (restaurantId) => dispatch(requestRestaurant(restaurantId)),
-    requestRestaurants:(input)=>dispatch(requestRestaurants(input)),
+    requestRestaurants:()=>dispatch(requestRestaurants()),
     requestReviews: (restaurantId) => dispatch(requestReviews(restaurantId)),
     logout: () => dispatch(logout()),
 

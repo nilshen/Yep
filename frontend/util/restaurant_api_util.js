@@ -1,4 +1,12 @@
-export const fetchRestaurants = (input) => {
+export const fetchRestaurants = () => {
+    return $.ajax ({
+        url:'/api/restaurants',
+        method:'GET',
+    })
+    
+}
+
+export const searchRestaurants = (input) => {
     return $.ajax ({
         url:'/api/restaurants',
         method:'GET',

@@ -11,7 +11,8 @@ class SearchResult extends React.Component {
     }
 
     componentDidMount() {
-        this.props.requestRestaurants(this.props.match.params.input);
+        // debugger
+        this.props.searchRestaurants(this.props.match.params.input);
     }
 
     componentDidUpdate(prevProps) {
