@@ -43,10 +43,26 @@ transform: translateX(-50%)
 }
 
 .searchbar-container-result{
+
     display: flex;
     justify-content: start;
+
+    // position: fixed;
+    // min-height: 720px;
+    // width: 314px;
+    width: 55%;
+
+    // overflow-y: scroll;
+    background:whitesmoke;
+    // margin-left: 10px;
+    // padding-right: 20px;
+    // border-radius: 10px;
+    z-index: 999;
 }
 
+.searchbar-container-result-hidden {
+    display: none;
+}
 
 .searchbar-restaurant {
     font-size: 18px;
@@ -91,12 +107,12 @@ transform: translateX(-50%)
 .index-item-container-searchbar{
     display: flex;
     flex-direction: row;
-    background-color: white;
+    // background-color: white;
 }
 .index-pic-searchbar {
     object-fit: cover;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     margin-top: 3px;
     margin-left: -30px;
     margin-right: 5px;
@@ -106,18 +122,18 @@ transform: translateX(-50%)
 }
 
 
-.pre-search-users-container {
-    display:flex;
-    justify-content: center;
-    position: fixed;
-    min-height: 720px;
-    width: 320px;
-    overflow-y: scroll;
-    background: var(--light-blue);
-    margin-left: 10px;
-    padding-right: 20px;
-    border-radius: 10px;
-}
-.pre-search-users-container-hidden {
-    display: hidden;
-}
+// .pre-search-users-container {
+//     display:flex;
+//     justify-content: center;
+//     position: fixed;
+//     // min-height: 720px;
+//     // width: 320px;
+//     overflow-y: scroll;
+//     background: white;
+//     // margin-left: 10px;
+//     // padding-right: 20px;
+//     // border-radius: 10px;
+// }
+// .pre-search-users-container-hidden {
+//     display: hidden;
+// }
