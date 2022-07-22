@@ -7,13 +7,13 @@ import Homepage from './homepage';
 const mapStateToProps = (state) => {
   return {
     currentUser: state.entities.users[state.session.id],
-    restaurants: Object.values(state.entities.restaurants)
+    restaurants: Object.values(state.entities.restaurants.all)
   };
 };
 
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
-  requestRestaurants: (input)=>dispatch(requestRestaurants(input))
+  requestRestaurants: ()=>dispatch(requestRestaurants())
 });
 
 export default connect(

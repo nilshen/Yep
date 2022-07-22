@@ -5,13 +5,13 @@ import { withRouter } from "react-router-dom";
 import { requestReviews } from "../../actions/review_actions";
 
 const mSTP = (state) => ({
-    restaurants: Object.values(state.entities.restaurants),
+    restaurants: Object.values(state.entities.restaurants.all),
     reviews: Object.values(state.entities.reviews),
     currentUser: state.entities.users[state.session.id],
 });
 
 const mDTP = (dispatch) => ({
-    requestRestaurants: (input) => dispatch(requestRestaurants(input)),
+    requestRestaurants: () => dispatch(requestRestaurants()),
     requestReviews: (restaurantId) => dispatch(requestReviews(restaurantId)),
     logout: ()=> dispatch(logout()),
 });

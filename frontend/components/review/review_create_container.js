@@ -9,7 +9,7 @@ const mSTP = (state, ownProps) => {
     // console.log(ownProps)
     return {
         currentUser: state.entities.users[state.session.id],
-        restaurant: state.entities.restaurants[ownProps.match.params.restaurantId],
+        restaurant: state.entities.restaurants.all[ownProps.match.params.restaurantId],
         errors: state.errors.review,
         user_id: state.session.id
     }
