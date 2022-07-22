@@ -1,6 +1,6 @@
 import { RECEIVE_ALL_RESTAURANTS, RECEIVE_RESTAURANT } from "../actions/restaurant_actions";
 
-const restaurantsReducer = (state={}, action) => {
+const restaurantsReducer = (state={all:{}, search: {}}, action) => {
 
     Object.freeze(state);
 

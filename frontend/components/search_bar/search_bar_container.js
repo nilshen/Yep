@@ -12,7 +12,7 @@ const mSTP = (state) => {
 
 
 const mDTP = (dispatch) => ({
-    requestRestaurants:(input)=>dispatch(requestRestaurants(input))
+    requestRestaurants:()=>dispatch(requestRestaurants())
 });
 
 

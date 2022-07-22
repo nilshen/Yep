@@ -34,10 +34,10 @@ class SearchBar extends React.Component {
         // history.go(0)
     }
 
-    // componentDidMount() {
-    //     // debugger    
-    //     this.props.requestRestaurants()
-    // }
+    componentDidMount() {
+        // debugger    
+        this.props.requestRestaurants()
+    }
 
 
     render () {
