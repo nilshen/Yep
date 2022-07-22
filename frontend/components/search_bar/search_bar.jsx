@@ -65,8 +65,8 @@ class SearchBar extends React.Component {
                     <FiSearch onClick={this.handleSearch} className="searchbar-icon"/>
                 </div>
                 
-                <div className={this.state.input !== "" ? "pre-search-users-container" : "pre-search-users-container-hidden"}>
-                <div className="searchbar-container-result">
+                <div className={this.state.input !== "" ? "searchbar-container-result" : "searchbar-container-result-hidden"}>
+                {/* <div className="searchbar-container-result"> */}
                     <ul>
                         {restaurants.filter((restaurant)=>{
                             if (this.state.input === "") {
@@ -93,7 +93,7 @@ class SearchBar extends React.Component {
                         ))}
                     </ul>
                 </div>
-                </div>
+                {/* </div> */}
             </div>
             </div>
         );
