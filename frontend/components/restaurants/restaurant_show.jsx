@@ -33,6 +33,8 @@ class RestaurantShow extends React.Component {
         const { restaurant, currentUser,logout } = this.props
 
         if (!restaurant) return null;
+
+        // if (!this.props.restaurant) return null;
         // debugger
         // console.log(currentUser)
         // console.log(currentUser.username)

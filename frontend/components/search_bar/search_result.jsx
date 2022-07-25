@@ -3,7 +3,7 @@ import Search_bar_container from "./search_bar_container";
 import { Link } from "react-router-dom";
 import {Footer} from "../footer/footer";
 import RestaurantIndexItem from '../restaurants/restaurant_index_item';
-
+import RestaurantMap from "../map/restaurant_map";
 
 class SearchResult extends React.Component {
     constructor(props) {
@@ -75,7 +75,9 @@ class SearchResult extends React.Component {
                     />
                         ))}
                     </ul>
-                    {/* <div>Google Map placeholder</div> */}
+                    <div className="biz-index-map-container">
+                        <RestaurantMap restaurants={restaurants} />
+                    </div>
                 
                 </div>
                 <div>
