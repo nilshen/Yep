@@ -1,6 +1,6 @@
 import { RECEIVE_ALL_RESTAURANTS, RECEIVE_RESTAURANT, RECEIVE_RESTAURANTS_SEARCH } from "../actions/restaurant_actions";
 
-const restaurantsReducer = (state={all:{}, search: {}}, action) => {
+const restaurantsReducer = (state={all:{}, restaurant:{}, search: {}}, action) => {
 
     Object.freeze(state);
 
@@ -11,7 +11,9 @@ const restaurantsReducer = (state={all:{}, search: {}}, action) => {
             nextState.all = action.restaurants;
             return nextState;
         case RECEIVE_RESTAURANT:
-            nextState[action.restaurant.id] = action.restaurant;
+            // debugger
+            // nextState[action.restaurant.id] = action.restaurant;
+            nextState.restaurant = action.restaurant;
             return nextState;
         case RECEIVE_RESTAURANTS_SEARCH:
             nextState.search = action.restaurants

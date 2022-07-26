@@ -68,7 +68,7 @@ class reviewCreate extends React.Component {
     }
 
     render() {
-        const { restaurant, currentUser } = this.props;
+        const { restaurant, currentUser, errors } = this.props;
         if (!restaurant) return null;
         // console.log(this.props)
         console.log(this.state)
@@ -78,6 +78,13 @@ class reviewCreate extends React.Component {
         // console.log(restaurant.name)
         // console.log(review)
         // debugger
+
+        let errorsList;
+        if (errors.length || this.state.rating === 0) {
+            errorsList = errors.responseJSON
+        } else {
+            errorsList = null;
+        };
 
         return (
             <div className="review-form-container">
@@ -117,6 +124,7 @@ class reviewCreate extends React.Component {
                         
                         <textarea className="create-review-form-textarea" onChange={this.update('body')} placeholder="Love this speakeasy for drinks and light bites. Be prepared to wait for a bit (you can get a drink at the upstairs bar) but its so worth it. The atmosphere is amazing and the decor is very cool with lots of plants. We all got the illusion, which is delicious and gorgeous (it changes color and they use light leaks in the table to make it glow)." required></textarea>
                     </div>
+                        <p className="create-review-errors">{errorsList}</p>
                         <button className="review-form-button">Post Review</button>
                     </form>
                 </div>

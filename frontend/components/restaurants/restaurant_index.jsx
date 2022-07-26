@@ -16,6 +16,7 @@ class RestaurantIndex extends React.Component {
     componentDidMount(){
         // debugger
         this.props.requestRestaurants()
+        window.scrollTo(0,0)
     }
 
     render() { 

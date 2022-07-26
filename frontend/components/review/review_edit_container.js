@@ -9,7 +9,8 @@ const mSTP = (state, ownProps) => {
     // console.log(ownProps);
     return {
         review: state.entities.reviews[ownProps.match.params.reviewId],
-        restaurant: state.entities.restaurants.all[ownProps.match.params.restaurantId],
+        // restaurant: state.entities.restaurants.all[ownProps.match.params.restaurantId],
+        restaurant: state.entities.restaurants.restaurant,
         currentUser: state.entities.users[state.session.id],
         user_id: state.session.id,
         restaurantId: ownProps.match.params.restaurantId,

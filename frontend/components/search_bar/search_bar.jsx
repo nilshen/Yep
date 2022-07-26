@@ -52,7 +52,7 @@ class SearchBar extends React.Component {
                     className="searchbar-default"
                     placeholder="Restaurants..."
                     onChange={this.update('input')}
-                    // value={this.state.input}
+                    value={this.state.input}
                     />
                 </p>
                 <p className="searchbar-location">
@@ -66,30 +66,32 @@ class SearchBar extends React.Component {
                 </div>
                 
                 <div className={this.state.input !== "" ? "searchbar-container-result" : "searchbar-container-result-hidden"}>
-                {/* <div className="searchbar-container-result"> */}
                     <ul>
+                        
                         {restaurants.filter((restaurant)=>{
                             if (this.state.input === "") {
-                                return ""
+                                return  ""
                             } else if (restaurant.name.toLowerCase().includes(this.state.input.toLowerCase())){
                                 return restaurant
                             } else if (restaurant.category.toLowerCase().includes(this.state.input.toLowerCase())){
                                 return restaurant
-                            } 
+                            }
                         }).map((restaurant) => (
-                            <Link to={`/restaurants/${restaurant.id}`} className="index-item" style={{ textDecoration: 'none' }} key={restaurant.id}>
-                            <div className='index-item-container-searchbar'>
-                                <img className='index-pic-searchbar' src={restaurant.photoUrls[0]} />
-                                <div className='index-item-individual'>
-                                    <h3>{restaurant.name}</h3>
-                                    <div className='index-item-individual-details'>
-                                        <div className='index-item-individual-details-cat'>{restaurant.category}</div>
-                                        <div>{restaurant.price}</div>
+        
+                                <Link onClick={()=>this.state.input=""} to={`/restaurants/${restaurant.id}`}  className="index-item" style={{ textDecoration: 'none' }} key={restaurant.id}>
+                                <div className='index-item-container-searchbar'>
+                                    <img className='index-pic-searchbar' src={restaurant.photoUrls[0]} />
+                                    <div className='index-item-individual'>
+                                        <h3>{restaurant.name}</h3>
+                                        <div className='index-item-individual-details'>
+                                            <div className='index-item-individual-details-cat'>{restaurant.category}</div>
+                                            <div>{restaurant.price}</div>
+                                        </div>
+                                        <div className="index-item-individual-hour">Hours: {restaurant.hours}</div>
                                     </div>
-                                    <div className="index-item-individual-hour">Hours: {restaurant.hours}</div>
                                 </div>
-                            </div>
-                            </Link>
+                                </Link> 
+                        
                         ))}
                     </ul>
                 </div>

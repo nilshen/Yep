@@ -71,6 +71,7 @@ class SessionForm extends React.Component {
             <div className='session-topwords'>Sign Up for Yep</div>
             <div className='session-topwords-2'>Connect with great local restaurants</div>
             <div><p className='term'>By logging in, you agree to Yep’s Terms of Service and Privacy Policy.</p></div>
+            <div>Already on Yep? <Link to={"/login"} style={{ textDecoration: 'none' }} className="session-topwords2">Log in</Link></div>
          </div>
          
       )

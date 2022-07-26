@@ -24,6 +24,7 @@
 .review-item-rating{
     display: flex;
     flex-direction: row;
+    z-index: -1;
 }
 
 .review-item-body{

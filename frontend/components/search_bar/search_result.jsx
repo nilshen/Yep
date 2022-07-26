@@ -13,11 +13,13 @@ class SearchResult extends React.Component {
     componentDidMount() {
         // debugger
         this.props.searchRestaurants(this.props.match.params.input);
+        window.scrollTo(0,0)
     }
 
     componentDidUpdate(prevProps) {
         if (prevProps.match.params.input !== this.props.match.params.input) {
             this.componentDidMount();
+            // this.props.clearErrors();
         }
     }
 
@@ -25,7 +27,14 @@ class SearchResult extends React.Component {
     render() {
         
         const {restaurants, requestReviews, currentUser, logout } = this.props;
-        
+        // if (this.props.restaurants.length===0) {
+        //     // return null
+        //     return <div className='no-search-result'> No results found. Please try another search.</div>
+        // }
+
+
+
+
         let session = currentUser ? (  
             <div className="login-signup">
               <h2 className="header-name">Welcome, {currentUser.username}!</h2>
@@ -43,13 +52,22 @@ class SearchResult extends React.Component {
               </div>
             )
         
+        //search errors
+
+        // let errorsList;      
+        // if (this.props.errors.length) {
+        //     businesses = [];
+        //     errorsList = this.props.errors.map( (err, idx) => (
+        //         <li key={idx}>{err}</li>
+        //     ))
+        // }
+
 
         return (
             <div>
                 <div className='header-container'>
                     <nav className="header-left">
                         <Link to="/restaurants" style={{ textDecoration: 'none' }}>Restaurants</Link> 
-                        {/* <p>Write a Review</p> */}
                     </nav>
                     <nav className="header-middle"> 
                         <Link to="/">
@@ -63,9 +81,10 @@ class SearchResult extends React.Component {
             
             <Search_bar_container/>
                 <div className="indexlayout-container">
-                    {/* <div>filter placeholder</div> */}
+                    
                 
                     <ul className="indexlayout-item">
+                    <div className="search-results">Search Results: {restaurants.length}</div>
                     {restaurants.map((restaurant, idx)=>(
                         <RestaurantIndexItem 
                         restaurant = { restaurant }
@@ -75,6 +94,7 @@ class SearchResult extends React.Component {
                     />
                         ))}
                     </ul>
+                    {/* <h1>{errorsList}</h1> */}
                     <div className="biz-index-map-container">
                         <RestaurantMap restaurants={restaurants} />
                     </div>

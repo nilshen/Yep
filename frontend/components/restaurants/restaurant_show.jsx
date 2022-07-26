@@ -16,29 +16,29 @@ class RestaurantShow extends React.Component {
         super(props)
     }
     componentDidMount() {
-        this.props.requestRestaurant(this.props.match.params.restaurantId)
-        // this.props.requestReviews(this.props.match.params.restaurantId)
+        // this.props.requestRestaurant(this.props.match.params.restaurantId)
+        this.props.requestRestaurant(this.props.restaurantId)
         window.scrollTo(0,0)
     }
 
-    componentDidUpdate(prevProps) {
-        if (prevProps.restaurantId !== this.props.restaurantId) {
-            this.componentDidMount();
-        }
-    }
+    // componentDidUpdate(prevProps) {
+    //     this.props.requestRestaurant(this.props.restaurantId)
+    //     // if (prevProps.restaurantId !== this.props.restaurantId) {
+    //     //     this.componentDidMount();
+    //     // }
+    // }
 
     render() {
         
         // debugger
         const { restaurant, currentUser,logout } = this.props
 
-        if (!restaurant) return null;
+        if (!(restaurant && restaurant.reviews)) return null;
 
-        // if (!this.props.restaurant) return null;
         // debugger
         // console.log(currentUser)
         // console.log(currentUser.username)
-        console.log(restaurant)
+        // console.log(restaurant)
 
         let session = currentUser ? (  
             <div className="header-show">

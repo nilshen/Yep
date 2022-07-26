@@ -7,6 +7,7 @@ export const CREATE_REVIEW = "CREATE_REVIEW";
 export const UPDATE_REVIEW = "UPDATE_REVIEW";
 export const REMOVE_REVIEW = "REMOVE_REVIEW";
 export const RECEIVE_REVIEW_ERRORS = "RECEIVE_REVIEW_ERRORS";
+export const CLEAR_REVIEW_ERRORS = "CLEAR_REVIEW_ERRORS";
 
 //action creator
 export const receiveAllReviews = (reviews) => {
@@ -34,6 +35,12 @@ export const receiveReviewErrors = (errors) => {
     return {
         type: RECEIVE_REVIEW_ERRORS,
         errors
+    }
+};
+
+export const clearReviewErrors = () => {
+    return {
+        type: CLEAR_REVIEW_ERRORS
     }
 };
 

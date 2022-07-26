@@ -57,7 +57,7 @@ transform: translateX(-50%)
     // margin-left: 10px;
     // padding-right: 20px;
     // border-radius: 10px;
-    z-index: 100;
+    z-index: 999;
 }
 
 .searchbar-container-result-hidden {
@@ -121,6 +121,35 @@ transform: translateX(-50%)
     
 }
 
+.search-results {
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        -webkit-letter-spacing: 0px;
+        -moz-letter-spacing: 0px;
+        -ms-letter-spacing: 0px;
+        letter-spacing: 0px;
+        line-height: 24px;
+        color: #2d2e2f;
+        text-align: start;
+        margin: 10px;
+}
+
+//no search result
+
+// .no-search-result{
+//     font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+//     font-size: 18px;
+//     font-weight: 600;
+//     -webkit-letter-spacing: 0px;
+//     -moz-letter-spacing: 0px;
+//     -ms-letter-spacing: 0px;
+//     letter-spacing: 0px;
+//     line-height: 24px;
+//     color: #2d2e2f;
+//     text-align: start;
+//     margin-top: 2px;
+// }
 
 // .pre-search-users-container {
 //     display:flex;
