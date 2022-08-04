@@ -24,8 +24,6 @@ Yep was built using the following technologies:
 * Users can login as a demo user for quicker access around the site
 * Errors are rendered in the event of inputting invalid credentials
 
-</br>
-</br>
 
 ### Reviews (Create, Read, Update, Delete)
 
@@ -34,8 +32,6 @@ Yep was built using the following technologies:
 * Errors will render if a rating or body of text aren't provided
 * Submitted reviews will affect the business's overall rating, as well as any deleted reviews
 
-</br>
-</br>
 
 ### Searchbar and Filters
 
