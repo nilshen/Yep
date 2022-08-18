@@ -210,24 +210,6 @@ harbs.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaura
 harbs.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaurants/harbs2.jpeg'), filename:'harbs2.jpeg')
 harbs.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaurants/harbs3.jpeg'), filename:'harbs3.jpeg')
 
-portale = Restaurant.create!(
-    name: "Portale", 
-    address: "126 W 18th St New York", 
-    city: "New York", 
-    state: "NY", 
-    zip_code: 10011, 
-    phone_number: "(212) 401-7986", 
-    category:"Steakhouses", 
-    website:"https://www.cotenyc.com", 
-    lat: 40.741280,
-    lng: -73.991270,
-    price:"$$$$", 
-    hours: "05:00 PM - 11:00 PM")
-
-cote.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaurants/cote1.jpeg'), filename:'cote1.jpeg')
-cote.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaurants/cote2.jpeg'), filename:'cote2.jpeg')
-cote.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaurants/cote3.jpeg'), filename:'cote3.jpeg')
-
 
 review1 = Review.create!(user_id: demo.id, restaurant_id: pl.id, rating: 5, body: "So good - love it. Delicious. Some of the waiters are arrogant but I don't care - I love the food. Yum Yum Yum Yum. Save room for desert if possible. Even if you have to throw up - so good. I love this place.")
 review2 = Review.create!(user_id: u1.id, restaurant_id: pl.id, rating: 3, body: "3. Rushed Experience 2. Ok Steak 3. Overcooked Steak - photo is suppose to be medium/medium rare 4. Horrific Accessibility - you enter from a locked back door with inside tables basically on top of it and you have to stand there and stand there with those tables of people starting at you while you wait for someone to come, unlock the fort, and let you in. 5. Rushed Service - full restaurant and steak came out 10 to 15 minutes after ordering")
