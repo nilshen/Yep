@@ -210,7 +210,23 @@ harbs.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaura
 harbs.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaurants/harbs2.jpeg'), filename:'harbs2.jpeg')
 harbs.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaurants/harbs3.jpeg'), filename:'harbs3.jpeg')
 
+portale = Restaurant.create!(
+    name: "Portale", 
+    address: "126 W 18th St New York", 
+    city: "New York", 
+    state: "NY", 
+    zip_code: 10011, 
+    phone_number: "(212) 401-7986", 
+    category:"Steakhouses", 
+    website:"https://www.cotenyc.com", 
+    lat: 40.741280,
+    lng: -73.991270,
+    price:"$$$$", 
+    hours: "05:00 PM - 11:00 PM")
 
+cote.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaurants/cote1.jpeg'), filename:'cote1.jpeg')
+cote.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaurants/cote2.jpeg'), filename:'cote2.jpeg')
+cote.photos.attach(io: open('https://yep-seeds.s3.amazonaws.com/images/restaurants/cote3.jpeg'), filename:'cote3.jpeg')
 
 
 review1 = Review.create!(user_id: demo.id, restaurant_id: pl.id, rating: 5, body: "So good - love it. Delicious. Some of the waiters are arrogant but I don't care - I love the food. Yum Yum Yum Yum. Save room for desert if possible. Even if you have to throw up - so good. I love this place.")
