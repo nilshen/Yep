@@ -53,3 +53,8 @@ Yep was built using the following technologies:
 * Allow users to upload photos when writing a review
 
 
+### To run this app
+* npm start
+* rails s
+
+
